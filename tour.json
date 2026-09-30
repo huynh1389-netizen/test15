@@ -1,0 +1,2817 @@
+{
+  "id": "08cf4e89-9fc0-426a-8903-a6590b502052",
+  "title": "Tour360E4",
+  "updatedAt": 1790754582311,
+  "version": 1,
+  "startScene": "01-1e4-55d4",
+  "scenes": [
+    {
+      "id": "01-1e4-55d4",
+      "title": "Sân E4 - UEB",
+      "panorama": "images/01-1e4-55d4_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-a9671d",
+          "type": "Scene",
+          "yaw": 6.192947860844617,
+          "pitch": 0.035472684471457905,
+          "title": "SẢNH TẦNG 1\nTòa nhà E4",
+          "tooltipImage": "images/hs-a9671d-img_muntctuj.png",
+          "target": "sanh1-97b6",
+          "transition": "zoom-in",
+          "description": "Tòa nhà E4 được thiết kế theo không gian mở và hiện đại. Đây là khu vực đón tiếp các đoàn chuyên gia, đối tác doanh nghiệp, đồng thời là đầu mối kết nối trung tâm giữa các khoa, viện và phòng chức năng trực thuộc UEB.",
+          "icon": "building"
+        },
+        {
+          "id": "hs-12e193",
+          "type": "Scene",
+          "yaw": 0.6092440624524631,
+          "pitch": -0.011052412229642039,
+          "title": "ĐẠI LỘ HOÀNG GIA\n",
+          "tooltipImage": "images/hs-12e193-img_muntctuj.png",
+          "transition": "zoom-in",
+          "target": "dailo-f4c0",
+          "description": "Lối vào"
+        }
+      ],
+      "defaultYaw": 6.215563910853121,
+      "defaultPitch": 0.5133464112084942,
+      "mcVideo": "videos/01-1e4-55d4-mc_muntctuj.webm",
+      "mcVideoWidth": 450
+    },
+    {
+      "id": "sanh1-97b6",
+      "title": "Sảnh T1 - UEB",
+      "panorama": "images/sanh1-97b6_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-dd3bfd",
+          "type": "Scene",
+          "yaw": 4.863952585899177,
+          "pitch": 0.23123282344643825,
+          "title": "Thang bộ Tầng 1-2",
+          "tooltipImage": "images/hs-dd3bfd-img_muntctuj.png",
+          "target": "1-cthang1-e2c1",
+          "transition": "zoom-in",
+          "description": "Lối lên tầng 2"
+        },
+        {
+          "id": "hs-a73864",
+          "type": "Scene",
+          "yaw": 6.253272398654956,
+          "pitch": -0.07647168611431088,
+          "title": "SÂN E4 \nĐẠI HỌC KINH TẾ - ĐHQGHN",
+          "tooltipImage": "images/hs-a73864-img_muntctuj.png",
+          "target": "01-1e4-55d4",
+          "transition": "zoom-in",
+          "description": "Tòa nhà E4 được thiết kế theo không gian mở và hiện đại. Đây là khu vực đón tiếp các đoàn chuyên gia, đối tác doanh nghiệp, đồng thời là đầu mối kết nối trung tâm giữa các khoa, viện và phòng chức năng trực thuộc UEB.\n",
+          "icon": "building"
+        },
+        {
+          "id": "hs-4b376a",
+          "type": "Scene",
+          "yaw": 2.2436415079265957,
+          "pitch": -0.1682231456245602,
+          "title": "THANG MÁY",
+          "tooltipImage": "images/hs-4b376a-img_muntctuj.png",
+          "target": "thangmay1-ed3e",
+          "transition": "zoom-in",
+          "description": "Di chuyển đến được các tầng 1,4,5,6,7"
+        }
+      ],
+      "defaultYaw": 3.5823000507042115,
+      "defaultPitch": -0.08716673947135112
+    },
+    {
+      "id": "1-cthang1-e2c1",
+      "title": "Thang bộ T1-2",
+      "panorama": "images/1-cthang1-e2c1_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-0c6170",
+          "type": "Scene",
+          "yaw": 0.7261231110643719,
+          "pitch": -0.4906502148988974,
+          "title": "SẢNH TẦNG 1\n",
+          "tooltipImage": "images/hs-0c6170-img_muntctuj.png",
+          "target": "sanh1-97b6",
+          "transition": "zoom-in",
+          "description": "Tòa nhà E4 - UEB"
+        },
+        {
+          "id": "hs-d8739e",
+          "type": "Scene",
+          "yaw": 1.1720631951550897,
+          "pitch": 0.19767535971061023,
+          "title": "SẢNH TẦNG 2\nTòa nhà E4 - UEB",
+          "tooltipImage": "images/hs-d8739e-img_muntctuj.png",
+          "target": "2-sanht2-62ed",
+          "transition": "zoom-in",
+          "description": "Hành lang thông thoáng kết nối đồng bộ giữa các tầng chức năng qua thang máy và thang bộ hiện đại, đảm bảo sự di chuyển thuận tiện, an toàn cho cán bộ, giảng viên và sinh viên.\n"
+        }
+      ],
+      "defaultYaw": 0.7568919238162019,
+      "defaultPitch": -0.06946771419075715
+    },
+    {
+      "id": "dailo-f4c0",
+      "title": "Lối vào Đại lộ Hoàng Gia",
+      "panorama": "images/dailo-f4c0_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-8d8363",
+          "type": "Scene",
+          "yaw": 2.912890536938213,
+          "pitch": 0.004401379544305417,
+          "title": "ĐẠI LỘ HOÀNG GIA",
+          "tooltipImage": "images/hs-8d8363-img_muntctuj.png",
+          "target": "t7-997e",
+          "transition": "zoom-in",
+          "description": "Đại lộ Hoàng Gia là không gian hành lang kết nối sang trọng, nổi bật với thiết kế hiện đại và thanh lịch. Đây là điểm check-in biểu tượng, lưu giữ những khoảnh khắc năng động và đáng nhớ của sinh viên UEB cùng khách tham quan."
+        },
+        {
+          "id": "hs-c6d136",
+          "type": "Scene",
+          "yaw": 0.5215653522899415,
+          "pitch": -0.03974118584917785,
+          "title": "SÂN E4 - ĐẠI HỌC KINH TẾ - ĐHQGHN",
+          "description": "Tòa nhà E4 được thiết kế theo không gian mở và hiện đại. Đây là khu vực đón tiếp các đoàn chuyên gia, đối tác doanh nghiệp, đồng thời là đầu mối kết nối trung tâm giữa các khoa, viện và phòng chức năng trực thuộc UEB.",
+          "tooltipImage": "images/hs-c6d136-img_muntctuj.png",
+          "target": "01-1e4-55d4",
+          "transition": "zoom-in"
+        },
+        {
+          "id": "hs-38b626",
+          "type": "Gallery",
+          "yaw": 5.03355406000855,
+          "pitch": 0.0712404248477354,
+          "title": "PHÒNG TUYỂN SINH VÀ TRUYỀN THÔNG",
+          "description": "Phòng Tuyển sinh là đơn vị đầu mối giải đáp và cung cấp thông tin chính thức về các phương thức xét tuyển, chương trình đào tạo và chính sách học bổng của trường. Đơn vị phụ trách tư vấn, định hướng ngành nghề và hỗ trợ phụ huynh, học sinh trong toàn bộ quy trình tuyển sinh.\nHotline liên hệ: 0913 486 773\n",
+          "tooltipImage": "images/hs-38b626-img_muntctuj.png",
+          "gallery": [
+            "images/hs-38b626-g0_muntctuj.png",
+            "images/hs-38b626-g1_muntctuj.png"
+          ],
+          "icon": "camera"
+        },
+        {
+          "id": "hs-866464",
+          "type": "Scene",
+          "yaw": 4.039361476753225,
+          "pitch": -0.010532036475813689,
+          "title": "KHOA KINH TẾ CHÍNH TRỊ",
+          "tooltipImage": "images/hs-866464-img_muntctuj.png",
+          "target": "01-ktchinhtri-66c1",
+          "transition": "zoom-in",
+          "description": "Khoa Kinh tế Chính trị tiền thân ra đời từ năm 1974 (thuộc Đại học Tổng hợp Hà Nội) – là 'viên gạch hồng' và cái nôi lịch sử đặt nền móng cho UEB ngày nay. Khoa sở hữu đội ngũ giảng viên hàng đầu với trên 70% có trình độ Tiến sĩ, chuyên gia tư vấn chính sách vĩ mô cấp quốc gia. Chương trình đào tạo không ngừng đổi mới, tiên phong mở rộng giảng dạy các học phần chuyên ngành bằng tiếng Anh (Kinh tế Thể chế, Kinh tế công...), trang bị tư duy lý luận sâu sắc kết hợp năng lực phân tích thực tiễn.",
+          "icon": "home"
+        },
+        {
+          "id": "hs-632d47",
+          "type": "Website",
+          "yaw": 5.032828639374569,
+          "pitch": 0.001968392003064867,
+          "title": "WEBSITE\nThông tin Tuyển sinh",
+          "target": "https://ueb.edu.vn/Tuyen-Sinh/UEB/Welcome/1728",
+          "description": "Click để truy cập vào Website",
+          "icon": "globe"
+        },
+        {
+          "id": "hs-75ccda",
+          "type": "Gallery",
+          "yaw": 4.044119017656589,
+          "pitch": -0.08002539458265856,
+          "title": "Thư viện ảnh",
+          "icon": "camera",
+          "gallery": [
+            "images/hs-75ccda-g0_muntctuj.png"
+          ]
+        },
+        {
+          "id": "hs-84a90b",
+          "type": "Website",
+          "yaw": 4.044622664496693,
+          "pitch": -0.1446018585722766,
+          "title": "Website",
+          "icon": "globe",
+          "tooltipImage": "images/hs-84a90b-img_muntctuj.png",
+          "target": "https://ueb.edu.vn/Don-Vi-Giang-Vien/UEB/DON-VI-DAO-TAO/1873/1912",
+          "description": "Click để truy cập trang website của khoa Kinh tế Chính trị"
+        }
+      ],
+      "defaultYaw": 3.409077556337345,
+      "defaultPitch": 0.10115616078703393
+    },
+    {
+      "id": "01-ktchinhtri-66c1",
+      "title": "Khoa KTCT - P.Khach",
+      "panorama": "images/01-ktchinhtri-66c1_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-055e8e",
+          "type": "Scene",
+          "yaw": 2.4201067492904302,
+          "pitch": -0.18695156882819153,
+          "title": "ĐẠI LỘ HOÀNG GIA\n",
+          "tooltipImage": "images/hs-055e8e-img_muntctuj.png",
+          "target": "dailo-f4c0",
+          "transition": "fly-in",
+          "description": "Lối vào"
+        },
+        {
+          "id": "hs-176321",
+          "type": "Scene",
+          "yaw": 5.702317699387924,
+          "pitch": -0.10243347450778928,
+          "title": "KHOA KINH TẾ CHÍNH TRỊ\nKhu vực làm việc Giảng viên",
+          "tooltipImage": "images/hs-176321-img_muntctuj.png",
+          "target": "01-chinhtri2-44d1",
+          "transition": "zoom-in",
+          "icon": "user",
+          "description": "Khoa Kinh tế Chính trị tiền thân ra đời từ năm 1974 (thuộc Đại học Tổng hợp Hà Nội) – là 'viên gạch hồng' và cái nôi lịch sử đặt nền móng cho UEB ngày nay. Khoa sở hữu đội ngũ giảng viên hàng đầu với trên 70% có trình độ Tiến sĩ, chuyên gia tư vấn chính sách vĩ mô cấp quốc gia. Chương trình đào tạo không ngừng đổi mới, tiên phong mở rộng giảng dạy các học phần chuyên ngành bằng tiếng Anh (Kinh tế Thể chế, Kinh tế công...), trang bị tư duy lý luận sâu sắc kết hợp năng lực phân tích thực tiễn.\n"
+        }
+      ],
+      "defaultYaw": 5.756644732080131,
+      "defaultPitch": -0.017950402654247632
+    },
+    {
+      "id": "01-chinhtri2-44d1",
+      "title": "Khoa KTCT - Khu vực Giảng viên 1",
+      "panorama": "images/01-chinhtri2-44d1_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-ae38fb",
+          "type": "Scene",
+          "yaw": 2.607585278426562,
+          "pitch": -0.12433892312495298,
+          "title": "KHOA KINH TẾ CHÍNH TRỊ\nVăn phòng\n",
+          "tooltipImage": "images/hs-ae38fb-img_muntctuj.png",
+          "target": "01-ktchinhtri-66c1",
+          "transition": "zoom-in",
+          "icon": "home",
+          "description": "Khoa Kinh tế Chính trị tiền thân ra đời từ năm 1974 (thuộc Đại học Tổng hợp Hà Nội) – là 'viên gạch hồng' và cái nôi lịch sử đặt nền móng cho UEB ngày nay. Khoa sở hữu đội ngũ giảng viên hàng đầu với trên 70% có trình độ Tiến sĩ, chuyên gia tư vấn chính sách vĩ mô cấp quốc gia. Chương trình đào tạo không ngừng đổi mới, tiên phong mở rộng giảng dạy các học phần chuyên ngành bằng tiếng Anh (Kinh tế Thể chế, Kinh tế công...), trang bị tư duy lý luận sâu sắc kết hợp năng lực phân tích thực tiễn."
+        },
+        {
+          "id": "hs-f2d674",
+          "type": "Scene",
+          "yaw": 5.6226213505649,
+          "pitch": -0.18834289871839238,
+          "title": "KHOA KINH TẾ CHÍNH TRỊ\nKhu vực làm việc của Giảng viên",
+          "tooltipImage": "images/hs-f2d674-img_muntctuj.png",
+          "target": "01-ktchinhtri3-df02",
+          "transition": "zoom-in",
+          "icon": "user",
+          "description": "Khoa Kinh tế Chính trị tiền thân ra đời từ năm 1974 (thuộc Đại học Tổng hợp Hà Nội) – là 'viên gạch hồng' và cái nôi lịch sử đặt nền móng cho UEB ngày nay. Khoa sở hữu đội ngũ giảng viên hàng đầu với trên 70% có trình độ Tiến sĩ, chuyên gia tư vấn chính sách vĩ mô cấp quốc gia. Chương trình đào tạo không ngừng đổi mới, tiên phong mở rộng giảng dạy các học phần chuyên ngành bằng tiếng Anh (Kinh tế Thể chế, Kinh tế công...), trang bị tư duy lý luận sâu sắc kết hợp năng lực phân tích thực tiễn.\n"
+        }
+      ],
+      "defaultYaw": 3.155094589906756,
+      "defaultPitch": -0.07843785014187388
+    },
+    {
+      "id": "01-ktchinhtri3-df02",
+      "title": "Khoa KTCT - Khu vực Giảng viên 2",
+      "panorama": "images/01-ktchinhtri3-df02_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-b7fb26",
+          "type": "Scene",
+          "yaw": 1.5743201667229973,
+          "pitch": -0.2012575789400335,
+          "title": "KHOA KINH TẾ CHÍNH TRỊ\nKhu vực làm việc của Giảng viên",
+          "tooltipImage": "images/hs-b7fb26-img_muntctuj.png",
+          "target": "01-chinhtri2-44d1",
+          "transition": "zoom-in",
+          "icon": "user",
+          "description": "Khoa Kinh tế Chính trị tiền thân ra đời từ năm 1974 (thuộc Đại học Tổng hợp Hà Nội) – là 'viên gạch hồng' và cái nôi lịch sử đặt nền móng cho UEB ngày nay. Khoa sở hữu đội ngũ giảng viên hàng đầu với trên 70% có trình độ Tiến sĩ, chuyên gia tư vấn chính sách vĩ mô cấp quốc gia. Chương trình đào tạo không ngừng đổi mới, tiên phong mở rộng giảng dạy các học phần chuyên ngành bằng tiếng Anh (Kinh tế Thể chế, Kinh tế công...), trang bị tư duy lý luận sâu sắc kết hợp năng lực phân tích thực tiễn.\n"
+        }
+      ],
+      "defaultYaw": 3.0437094833593807,
+      "defaultPitch": 0.04022033984787754
+    },
+    {
+      "id": "1-cuasite1-0d88",
+      "title": "CỬA VIỆN ĐÀO TẠO QUỐC TẾ_1",
+      "panorama": "images/1-cuasite1-0d88_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-9af8c6",
+          "type": "Scene",
+          "yaw": 0.7281965550110259,
+          "pitch": -0.005601726043928057,
+          "title": "ĐẠI LỘ HOÀNG GIA",
+          "tooltipImage": "images/hs-9af8c6-img_muntctuj.png",
+          "target": "t7-997e",
+          "transition": "zoom-in",
+          "description": "Đại lộ Hoàng Gia là không gian hành lang kết nối sang trọng, nổi bật với thiết kế hiện đại và thanh lịch. Đây là điểm check-in biểu tượng, lưu giữ những khoảnh khắc năng động và đáng nhớ của sinh viên UEB cùng khách tham quan."
+        },
+        {
+          "id": "hs-7c678a",
+          "type": "Scene",
+          "yaw": 6.189906642827345,
+          "pitch": -0.023944161021509647,
+          "title": "VIỆN ĐÀO TẠO QUỐC TẾ\nSảnh 1 ",
+          "tooltipImage": "images/hs-7c678a-img_muntctuj.png",
+          "target": "1-site3a-f381",
+          "icon": "home",
+          "description": "Viện Đào tạo Quốc tế (SITE) là đơn vị triển khai các chương trình cử nhân và thạc sĩ liên kết quốc tế uy tín bậc nhất của UEB, nổi bật với chương trình Cử nhân Quản trị Kinh doanh hợp tác cùng Đại học Troy (BSBA Troy - hơn 20 năm phát triển bền vững) và Đại học St.Francis (BBA USF - Hoa Kỳ). Toàn bộ chương trình đạt kiểm định chất lượng giáo dục khắt khe của Hoa Kỳ (AACSB, ACBSP), giảng dạy hoàn toàn bằng tiếng Anh với 100% bằng cử nhân do chính các đại học Hoa Kỳ cấp, mở ra cơ hội chuyển tiếp linh hoạt và lộ trình thực tập, làm việc tại các tập đoàn đa quốc gia hàng đầu."
+        },
+        {
+          "id": "hs-b9a25a",
+          "type": "Scene",
+          "yaw": 4.708863863269874,
+          "pitch": -0.09673319636333133,
+          "title": "VIỆN ĐÀO TẠO QUỐC TẾ\n",
+          "target": "1-cuasite3-4d0e",
+          "tooltipImage": "images/hs-b9a25a-img_muntctuj.png",
+          "transition": "zoom-in",
+          "description": "Cửa số 2",
+          "icon": "arrow"
+        }
+      ],
+      "defaultYaw": 6.238923385426423,
+      "defaultPitch": 0.1377512957882483
+    },
+    {
+      "id": "1-site3a-f381",
+      "title": "VIỆN ĐÀO TẠO QUỐC TẾ_Sảnh 1",
+      "panorama": "images/1-site3a-f381_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-ba8491",
+          "type": "Scene",
+          "yaw": 5.1225895851738406,
+          "pitch": 0.006938550095271889,
+          "title": "VIỆN ĐÀO TẠO QUỐC TẾ\nVăn phòng 1",
+          "tooltipImage": "images/hs-ba8491-img_muntctuj.png",
+          "target": "1-site5-e4af",
+          "transition": "zoom-in",
+          "icon": "user",
+          "description": "Viện Đào tạo Quốc tế (SITE) là đơn vị triển khai các chương trình cử nhân và thạc sĩ liên kết quốc tế uy tín bậc nhất của UEB, nổi bật với chương trình Cử nhân Quản trị Kinh doanh hợp tác cùng Đại học Troy (BSBA Troy - hơn 20 năm phát triển bền vững) và Đại học St.Francis (BBA USF - Hoa Kỳ). Toàn bộ chương trình đạt kiểm định chất lượng giáo dục khắt khe của Hoa Kỳ (AACSB, ACBSP), giảng dạy hoàn toàn bằng tiếng Anh với 100% bằng cử nhân do chính các đại học Hoa Kỳ cấp, mở ra cơ hội chuyển tiếp linh hoạt và lộ trình thực tập, làm việc tại các tập đoàn đa quốc gia hàng đầu."
+        },
+        {
+          "id": "hs-32cd82",
+          "type": "Scene",
+          "yaw": 2.9699766299891674,
+          "pitch": -0.13554048546776798,
+          "title": "VIỆN ĐÀO TẠO QUỐC TẾ\n",
+          "tooltipImage": "images/hs-32cd82-img_muntctuj.png",
+          "target": "1-cuasite3-4d0e",
+          "transition": "zoom-in",
+          "description": "Cửa số 2"
+        },
+        {
+          "id": "hs-2e613f",
+          "type": "Scene",
+          "yaw": 2.266909157643759,
+          "pitch": -0.37712736812618,
+          "title": "VIỆN ĐÀO TẠO QUỐC TẾ\n",
+          "tooltipImage": "images/hs-2e613f-img_muntctuj.png",
+          "target": "1-cuasite1-0d88",
+          "transition": "zoom-in",
+          "description": "Cửa số 1"
+        },
+        {
+          "id": "hs-2722c3",
+          "type": "Gallery",
+          "yaw": 5.217037720169203,
+          "pitch": 0.00538283304395315,
+          "title": "Thư viện ảnh",
+          "icon": "camera",
+          "tooltipImage": "images/hs-2722c3-img_muntctuj.png",
+          "gallery": [
+            "images/hs-2722c3-g0_muntctuj.jpg"
+          ]
+        }
+      ],
+      "defaultYaw": 5.226169643207026,
+      "defaultPitch": 0.30114043045507666
+    },
+    {
+      "id": "1-site5-e4af",
+      "title": "Văn phòng VIỆN ĐÀO TẠO QUỐC TẾ_1",
+      "panorama": "images/1-site5-e4af_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-64b274",
+          "type": "Scene",
+          "yaw": 1.811840686586471,
+          "pitch": -0.1648258012253241,
+          "title": "VIỆN ĐÀO TẠO QUỐC TẾ\nSảnh 1",
+          "target": "1-site3a-f381",
+          "tooltipImage": "images/hs-64b274-img_muntctuj.png",
+          "transition": "zoom-in",
+          "description": "Viện Đào tạo Quốc tế (SITE) là đơn vị triển khai các chương trình cử nhân và thạc sĩ liên kết quốc tế uy tín bậc nhất của UEB, nổi bật với chương trình Cử nhân Quản trị Kinh doanh hợp tác cùng Đại học Troy (BSBA Troy - hơn 20 năm phát triển bền vững) và Đại học St.Francis (BBA USF - Hoa Kỳ). Toàn bộ chương trình đạt kiểm định chất lượng giáo dục khắt khe của Hoa Kỳ (AACSB, ACBSP), giảng dạy hoàn toàn bằng tiếng Anh với 100% bằng cử nhân do chính các đại học Hoa Kỳ cấp, mở ra cơ hội chuyển tiếp linh hoạt và lộ trình thực tập, làm việc tại các tập đoàn đa quốc gia hàng đầu."
+        },
+        {
+          "id": "hs-2d0bf1",
+          "type": "Website",
+          "yaw": 5.630783641970423,
+          "pitch": -0.1716788630884971,
+          "title": "Website",
+          "icon": "globe",
+          "tooltipImage": "images/hs-2d0bf1-img_muntctuj.png",
+          "target": "https://ueb.edu.vn/Don-Vi-Giang-Vien/UEB/don-vi-nghien-cuu-va-dich-vu/1875/1958",
+          "description": "Click để truy cập trang website của Viện Đào tạo Quốc tế (SITE)"
+        },
+        {
+          "id": "hs-1050a1",
+          "type": "Gallery",
+          "yaw": 5.812534999053093,
+          "pitch": -0.16449074062401547,
+          "title": "Thư viện ảnh",
+          "icon": "camera",
+          "tooltipImage": "images/hs-1050a1-img_muntctuj.png",
+          "gallery": [
+            "images/hs-1050a1-g0_muntctuj.jpg"
+          ]
+        }
+      ],
+      "defaultYaw": 5.998629236052326,
+      "defaultPitch": -0.13347371972661826
+    },
+    {
+      "id": "1-cuasite3-4d0e",
+      "title": "VIỆN ĐÀO TẠO QUỐC TẾ Cửa 2",
+      "panorama": "images/1-cuasite3-4d0e_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-0bb776",
+          "type": "Scene",
+          "yaw": 1.9788767611293756,
+          "pitch": 0.010874279749067961,
+          "title": "VIỆN ĐÀO TẠO QUỐC TẾ\nVăn phòng 2",
+          "tooltipImage": "images/hs-0bb776-img_muntctuj.png",
+          "target": "1-site1-68ae",
+          "icon": "home",
+          "description": "Viện Đào tạo Quốc tế (SITE) là đơn vị triển khai các chương trình cử nhân và thạc sĩ liên kết quốc tế uy tín bậc nhất của UEB, nổi bật với chương trình Cử nhân Quản trị Kinh doanh hợp tác cùng Đại học Troy (BSBA Troy - hơn 20 năm phát triển bền vững) và Đại học St.Francis (BBA USF - Hoa Kỳ). Toàn bộ chương trình đạt kiểm định chất lượng giáo dục khắt khe của Hoa Kỳ (AACSB, ACBSP), giảng dạy hoàn toàn bằng tiếng Anh với 100% bằng cử nhân do chính các đại học Hoa Kỳ cấp, mở ra cơ hội chuyển tiếp linh hoạt và lộ trình thực tập, làm việc tại các tập đoàn đa quốc gia hàng đầu.\n"
+        },
+        {
+          "id": "hs-f73ce7",
+          "type": "Scene",
+          "yaw": 3.196914078871534,
+          "pitch": -0.060487534878940874,
+          "title": "VIỆN ĐÀO TẠO QUỐC TẾ\n",
+          "tooltipImage": "images/hs-f73ce7-img_muntctuj.png",
+          "target": "1-cuasite1-0d88",
+          "description": "Cửa số 1"
+        }
+      ],
+      "defaultYaw": 1.6168348980026548,
+      "defaultPitch": 0.3272758956878219
+    },
+    {
+      "id": "1-site1-68ae",
+      "title": "Văn phòng VIỆN ĐÀO TẠO QUỐC TẾ_2",
+      "panorama": "images/1-site1-68ae_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-b6bcaa",
+          "type": "Scene",
+          "yaw": 3.2319487775816116,
+          "pitch": -0.23290759434072572,
+          "title": "VIỆN ĐÀO TẠO QUỐC TẾ\n",
+          "tooltipImage": "images/hs-b6bcaa-img_muntctuj.png",
+          "target": "1-cuasite3-4d0e",
+          "description": "Cửa số 2"
+        }
+      ],
+      "defaultYaw": 0.6213979398958257,
+      "defaultPitch": -0.16604161043070587
+    },
+    {
+      "id": "2-sanht2-62ed",
+      "title": "Sảnh T2",
+      "panorama": "images/2-sanht2-62ed_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-77f69d",
+          "type": "Scene",
+          "yaw": 3.263550375720859,
+          "pitch": -0.4106426813974522,
+          "title": "Cầu thang bộ T1-2",
+          "tooltipImage": "images/hs-77f69d-img_muntctuj.png",
+          "target": "1-cthang1-e2c1",
+          "transition": "zoom-in",
+          "description": "Lối xuống tầng 1"
+        },
+        {
+          "id": "hs-9cef00",
+          "type": "Scene",
+          "yaw": 3.5387682809294883,
+          "pitch": 0.15583939052683804,
+          "title": "Cầu thang bộ T2-3",
+          "tooltipImage": "images/hs-9cef00-img_muntctuj.png",
+          "transition": "zoom-in",
+          "target": "2-thangbot2-610c",
+          "description": "Lối lên tầng 3"
+        },
+        {
+          "id": "hs-90ce0a",
+          "type": "Scene",
+          "yaw": 6.236877663203372,
+          "pitch": -0.22116702260003063,
+          "title": "THANG MÁY",
+          "description": "Thang máy KHÔNG hoạt động ở tầng 2, vui lòng đi thang bộ",
+          "tooltipImage": "images/hs-90ce0a-img_muntctuj.png"
+        }
+      ],
+      "defaultYaw": 3.5230354079735546,
+      "defaultPitch": 0.039442429338538254,
+      "mcVideo": "videos/2-sanht2-62ed-mc_muntctuj.webm",
+      "mcVideoWidth": 450
+    },
+    {
+      "id": "2-thangbot2-610c",
+      "title": "Thang bộ T2-3",
+      "panorama": "images/2-thangbot2-610c_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-904768",
+          "type": "Scene",
+          "yaw": 2.842051484124499,
+          "pitch": -0.43541577064036296,
+          "title": "SẢNH TẦNG 2\nTòa nhà E4 - UEB",
+          "target": "2-sanht2-62ed",
+          "transition": "zoom-in",
+          "tooltipImage": "images/hs-904768-img_muntctuj.png",
+          "description": "Hành lang thông thoáng kết nối đồng bộ giữa các tầng chức năng qua thang máy và thang bộ hiện đại, đảm bảo sự di chuyển thuận tiện, an toàn cho cán bộ, giảng viên và sinh viên.\n"
+        },
+        {
+          "id": "hs-cc078b",
+          "type": "Scene",
+          "yaw": 3.3937816948050124,
+          "pitch": 0.14691346990663212,
+          "title": "SẢNH TẦNG 3\nTòa nhà E4 - UEB",
+          "target": "3-sanht3-7ddd",
+          "transition": "zoom-in",
+          "tooltipImage": "images/hs-cc078b-img_muntctuj.png",
+          "description": "Không gian chuyển tiếp tầng 3 kết nối các phòng thực hành chuyên dụng và Viện Quản trị Kinh doanh, được bố trí biển chỉ dẫn rõ ràng, tạo sự thuận tiện cho việc học tập và nghiên cứu.\n"
+        }
+      ],
+      "defaultYaw": 3.3999680312165643,
+      "defaultPitch": -0.008622042285172604
+    },
+    {
+      "id": "3-sanht3-7ddd",
+      "title": "Sảnh T3",
+      "panorama": "images/3-sanht3-7ddd_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-a9588d",
+          "type": "Scene",
+          "yaw": 5.061678880032923,
+          "pitch": 0.14283623578064475,
+          "title": "Câu thang bộ T3-4",
+          "tooltipImage": "images/hs-a9588d-img_muntctuj.png",
+          "target": "4-cauthangbot4-46d1",
+          "transition": "zoom-in",
+          "description": "Lối lên tầng 3",
+          "icon": "arrow_left"
+        },
+        {
+          "id": "hs-316ce1",
+          "type": "Scene",
+          "yaw": 4.591009826198163,
+          "pitch": -0.42633475189221803,
+          "title": "Cầu thang bộ T2-3",
+          "tooltipImage": "images/hs-316ce1-img_muntctuj.png",
+          "target": "2-thangbot2-610c",
+          "transition": "zoom-in",
+          "description": "Lối xuống tầng 2",
+          "icon": "arrow"
+        },
+        {
+          "id": "hs-c13696",
+          "type": "Scene",
+          "yaw": 3.7620839245143216,
+          "pitch": -0.06435931048164178,
+          "title": "HÀNH LANG TẦNG 3\nTòa nhà E4 - UEB",
+          "target": "3-hl-t3-eaab",
+          "transition": "zoom-in",
+          "tooltipImage": "images/hs-c13696-img_muntctuj.png",
+          "description": "Không gian chuyển tiếp tầng 3 kết nối các phòng thực hành chuyên dụng và Viện Quản trị Kinh doanh, được bố trí biển chỉ dẫn rõ ràng, tạo sự thuận tiện cho việc học tập và nghiên cứu.",
+          "icon": "arrow"
+        },
+        {
+          "id": "hs-ed27b2",
+          "type": "Scene",
+          "yaw": 2.4605173828086,
+          "pitch": -0.12982681076359626,
+          "title": "PHÒNG HỌC MÁY TÍNH",
+          "tooltipImage": "images/hs-ed27b2-img_muntctuj.png",
+          "target": "t7-f35e",
+          "transition": "zoom-in",
+          "description": "Hệ thống phòng máy tính hiện đại được trang bị cấu hình cao, kết nối internet tốc độ cao cùng các phần mềm phân tích dữ liệu, tài chính và mô phỏng kinh doanh chuyên dụng, phục vụ tối đa cho học tập và nghiên cứu thực chiến.\n",
+          "icon": "home"
+        },
+        {
+          "id": "hs-f629dd",
+          "type": "Scene",
+          "yaw": 1.716559056581989,
+          "pitch": -0.1347534391699432,
+          "title": "Thang máy",
+          "description": "Thang máy KHÔNG hoạt động ở tầng 3, vui lòng đi thang bộ",
+          "tooltipImage": "images/hs-f629dd-img_muntctuj.png",
+          "transition": "zoom-in"
+        }
+      ],
+      "defaultYaw": 2.2846844963111255,
+      "defaultPitch": 0.013498880868925145,
+      "mcVideo": "videos/3-sanht3-7ddd-mc_muntctuj.webm",
+      "mcVideoWidth": 450
+    },
+    {
+      "id": "3-hl-t3-eaab",
+      "title": "Hành lang T3",
+      "panorama": "images/3-hl-t3-eaab_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-a49dac",
+          "type": "Scene",
+          "yaw": 0.1237991151003214,
+          "pitch": -0.037758650278655326,
+          "title": "VIỆN QUẢN TRỊ KINH DOANH",
+          "tooltipImage": "images/hs-a49dac-img_muntctuj.png",
+          "target": "3--vienqtkd-fbdf",
+          "transition": "zoom-in",
+          "description": "Lối vào",
+          "icon": "home"
+        },
+        {
+          "id": "hs-a50965",
+          "type": "Scene",
+          "yaw": 3.9036278851243775,
+          "pitch": -0.10180089661631397,
+          "title": "PHÒNG HỌC MÁY TÍNH",
+          "tooltipImage": "images/hs-a50965-img_muntctuj.png",
+          "target": "3-phonghoc2-9d33",
+          "transition": "zoom-in",
+          "description": "Hệ thống phòng máy tính hiện đại được trang bị cấu hình cao, kết nối internet tốc độ cao cùng các phần mềm phân tích dữ liệu, tài chính và mô phỏng kinh doanh chuyên dụng, phục vụ tối đa cho học tập và nghiên cứu thực chiến.\n",
+          "icon": "home"
+        },
+        {
+          "id": "hs-fd044a",
+          "type": "Scene",
+          "yaw": 3.188649380254908,
+          "pitch": -0.07302840648624698,
+          "title": "SẢNH TẦNG 3\nTòa nhà E4 - UEB",
+          "tooltipImage": "images/hs-fd044a-img_muntctuj.png",
+          "target": "3-sanht3-7ddd",
+          "transition": "zoom-in",
+          "description": "Không gian chuyển tiếp tầng 3 kết nối các phòng thực hành chuyên dụng và Viện Quản trị Kinh doanh, được bố trí biển chỉ dẫn rõ ràng, tạo sự thuận tiện cho việc học tập và nghiên cứu.\n"
+        }
+      ],
+      "defaultYaw": 6.109881211601682,
+      "defaultPitch": 0.13609595537405683
+    },
+    {
+      "id": "3--vienqtkd-fbdf",
+      "title": "Cửa viện QTKD",
+      "panorama": "images/3--vienqtkd-fbdf_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-f82d6a",
+          "type": "Scene",
+          "yaw": 3.0419017315412566,
+          "pitch": -0.05888402349009714,
+          "title": "HÀNH LANG TẦNG 3\nTòa nhà E4 - UEB",
+          "tooltipImage": "images/hs-f82d6a-img_muntctuj.png",
+          "target": "3-hl-t3-eaab",
+          "transition": "zoom-in",
+          "description": "Không gian chuyển tiếp tầng 3 kết nối các phòng thực hành chuyên dụng và Viện Quản trị Kinh doanh, được bố trí biển chỉ dẫn rõ ràng, tạo sự thuận tiện cho việc học tập và nghiên cứu.\n"
+        },
+        {
+          "id": "hs-765e50",
+          "type": "Scene",
+          "yaw": 0.376077920905222,
+          "pitch": -0.03565263574289945,
+          "title": "VIỆN QUẢN TRỊ KINH DOANH\nĐại học Kinh tế - ĐHQGHN",
+          "tooltipImage": "images/hs-765e50-img_muntctuj.png",
+          "transition": "zoom-in",
+          "target": "3-vienqtkd1-25fb",
+          "description": "Viện Quản trị Kinh doanh (SBA) là đơn vị đóng góp nòng cốt đưa lĩnh vực Kinh doanh & Nghiên cứu Quản lý của ĐHQGHN lọt Top 451–500 thế giới (QS WUR by Subject). Chương trình đào tạo cử nhân QTKD đạt chuẩn kiểm định quốc tế ACBSP (Hoa Kỳ). Với mạng lưới hơn 100+ doanh nghiệp đồng hành, sinh viên SBA được trải nghiệm học tập thực chiến, tham gia trao đổi sinh viên quốc tế không tăng học phí tại hơn 60 trường đối tác trên 16 quốc gia.\n",
+          "icon": "home"
+        },
+        {
+          "id": "hs-e23be2",
+          "type": "Scene",
+          "yaw": 5.696426561100926,
+          "pitch": -0.12019304141826592,
+          "title": "PHÒNG HỌC MÁY TÍNH",
+          "description": "Hệ thống phòng máy tính hiện đại được trang bị cấu hình cao, kết nối internet tốc độ cao cùng các phần mềm phân tích dữ liệu, tài chính và mô phỏng kinh doanh chuyên dụng, phục vụ tối đa cho học tập và nghiên cứu thực chiến.\n",
+          "tooltipImage": "images/hs-e23be2-img_muntctuj.png",
+          "target": "t7-f35e",
+          "transition": "zoom-in"
+        }
+      ],
+      "defaultYaw": 1.8058655169818592,
+      "defaultPitch": 0.0024621001693714284
+    },
+    {
+      "id": "3-vienqtkd1-25fb",
+      "title": "Văn phòng Viện QTKD - P.Khach",
+      "panorama": "images/3-vienqtkd1-25fb_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-be5132",
+          "type": "Scene",
+          "yaw": 5.285091478874645,
+          "pitch": -0.08967789749781074,
+          "title": "VIỆN QUẢN TRỊ KINH DOANH\n",
+          "tooltipImage": "images/hs-be5132-img_muntctuj.png",
+          "target": "3--vienqtkd-fbdf",
+          "transition": "zoom-in",
+          "description": "Lối ra",
+          "icon": "arrow_left"
+        },
+        {
+          "id": "hs-2a774a",
+          "type": "Scene",
+          "yaw": 0.39646920206379727,
+          "pitch": 0.011553704699272638,
+          "title": "VIỆN QUẢN TRỊ KINH DOANH\nKhu vực làm việc Giảng viên",
+          "tooltipImage": "images/hs-2a774a-img_muntctuj.png",
+          "target": "3-vienqtkd2-7eae",
+          "transition": "zoom-in",
+          "description": "Viện Quản trị Kinh doanh (SBA) là đơn vị đóng góp nòng cốt đưa lĩnh vực Kinh doanh & Nghiên cứu Quản lý của ĐHQGHN lọt Top 451–500 thế giới (QS WUR by Subject). Chương trình đào tạo cử nhân QTKD đạt chuẩn kiểm định quốc tế ACBSP (Hoa Kỳ). Với mạng lưới hơn 100+ doanh nghiệp đồng hành, sinh viên SBA được trải nghiệm học tập thực chiến, tham gia trao đổi sinh viên quốc tế không tăng học phí tại hơn 60 trường đối tác trên 16 quốc gia.\n",
+          "icon": "user"
+        },
+        {
+          "id": "hs-90202f",
+          "type": "Gallery",
+          "yaw": 2.759421544735275,
+          "pitch": -0.07298520603128011,
+          "title": "Thư viện ảnh",
+          "icon": "camera",
+          "gallery": [
+            "images/hs-90202f-g0_muntctuj.jpg"
+          ],
+          "tooltipImage": "images/hs-90202f-img_muntctuj.png",
+          "description": ""
+        },
+        {
+          "id": "hs-55e525",
+          "type": "Website",
+          "yaw": 2.7563500538879344,
+          "pitch": -0.1634530343319398,
+          "title": "Website",
+          "icon": "globe",
+          "target": "https://ueb.edu.vn/Don-Vi-Giang-Vien/UEB/DON-VI-DAO-TAO/1873/1927",
+          "description": "Click để truy cập website của Viện QTKD",
+          "tooltipImage": "images/hs-55e525-img_muntctuj.png"
+        }
+      ],
+      "defaultYaw": 2.9501120261269587,
+      "defaultPitch": -0.07888441497225074
+    },
+    {
+      "id": "3-vienqtkd2-7eae",
+      "title": "Khu vực làm việc Giảng viên Viện QTKD",
+      "panorama": "images/3-vienqtkd2-7eae_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-8b7730",
+          "type": "Scene",
+          "yaw": 2.2347261715590863,
+          "pitch": -0.029333973583523187,
+          "title": "VIỆN QUẢN TRỊ KINH DOANH\nVăn phòng",
+          "target": "3-vienqtkd1-25fb",
+          "tooltipImage": "images/hs-8b7730-img_muntctuj.png",
+          "transition": "zoom-in",
+          "description": "Viện Quản trị Kinh doanh (SBA) là đơn vị đóng góp nòng cốt đưa lĩnh vực Kinh doanh & Nghiên cứu Quản lý của ĐHQGHN lọt Top 451–500 thế giới (QS WUR by Subject). Chương trình đào tạo cử nhân QTKD đạt chuẩn kiểm định quốc tế ACBSP (Hoa Kỳ). Với mạng lưới hơn 100+ doanh nghiệp đồng hành, sinh viên SBA được trải nghiệm học tập thực chiến, tham gia trao đổi sinh viên quốc tế không tăng học phí tại hơn 60 trường đối tác trên 16 quốc gia.\n",
+          "icon": "home"
+        },
+        {
+          "id": "hs-ee3a17",
+          "type": "Scene",
+          "yaw": 2.330823015617887,
+          "pitch": -0.05193865495939809,
+          "title": "VIỆN QUẢN TRỊ KINH DOANH\n",
+          "target": "3--vienqtkd-fbdf",
+          "tooltipImage": "images/hs-ee3a17-img_muntctuj.png",
+          "transition": "zoom-in",
+          "description": "Lối ra",
+          "icon": "arrow"
+        },
+        {
+          "id": "hs-6384e3",
+          "type": "Gallery",
+          "yaw": 0.0877708139437821,
+          "pitch": 0.11853387183396569,
+          "title": "Thư viện ảnh",
+          "icon": "camera",
+          "tooltipImage": "images/hs-6384e3-img_muntctuj.png",
+          "gallery": [
+            "images/hs-6384e3-g0_muntctuj.jpg"
+          ]
+        },
+        {
+          "id": "hs-eeca0a",
+          "type": "Website",
+          "yaw": 0.08594439421187758,
+          "pitch": 0.011566245572798062,
+          "title": "Website",
+          "icon": "globe",
+          "description": "Click để truy cập trang website của Viện Quản trị Kinh doanh",
+          "tooltipImage": "images/hs-eeca0a-img_muntctuj.png",
+          "target": "https://ueb.edu.vn/Don-Vi-Giang-Vien/UEB/DON-VI-DAO-TAO/1873/1927"
+        }
+      ],
+      "defaultYaw": 1.7038635783033287,
+      "defaultPitch": -0.11577061400027233
+    },
+    {
+      "id": "4-cauthangbot4-46d1",
+      "title": "Thang bộ T3-4",
+      "panorama": "images/4-cauthangbot4-46d1_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-f1653a",
+          "type": "Scene",
+          "yaw": 3.7104760570595032,
+          "pitch": 0.14928509070851015,
+          "title": "SẢNH TẦNG 4\nTòa nhà E4 - UEB",
+          "tooltipImage": "images/hs-f1653a-img_muntctuj.png",
+          "transition": "zoom-in",
+          "target": "4-sanht4-876f",
+          "description": "Sảnh hành lang tầng 4 kết nối khu vực học vụ và các khoa chuyên môn, phục vụ nhu cầu liên hệ công tác, tư vấn học vụ và di chuyển liên tầng nhanh chóng.\n"
+        },
+        {
+          "id": "hs-85718b",
+          "type": "Scene",
+          "yaw": 3.275877382354085,
+          "pitch": -0.4776563714440858,
+          "title": "SẢNH TẦNG 3\nTòa nhà E4 - UEB",
+          "target": "3-sanht3-7ddd",
+          "tooltipImage": "images/hs-85718b-img_muntctuj.png",
+          "transition": "zoom-in",
+          "description": "Không gian chuyển tiếp tầng 3 kết nối các phòng thực hành chuyên dụng và Viện Quản trị Kinh doanh, được bố trí biển chỉ dẫn rõ ràng, tạo sự thuận tiện cho việc học tập và nghiên cứu.\n"
+        }
+      ],
+      "defaultYaw": 3.303138474837098,
+      "defaultPitch": -0.003339552590978734
+    },
+    {
+      "id": "4-sanht4-876f",
+      "title": "Sảnh T4",
+      "panorama": "images/4-sanht4-876f_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-969507",
+          "type": "Scene",
+          "yaw": 1.5159265595870448,
+          "pitch": -0.43204580085075284,
+          "title": "Cầu thang bộ T3-4",
+          "tooltipImage": "images/hs-969507-img_muntctuj.png",
+          "transition": "zoom-in",
+          "target": "4-cauthangbot4-46d1",
+          "description": "Lối xuống tầng 3",
+          "icon": "arrow"
+        },
+        {
+          "id": "hs-94218a",
+          "type": "Scene",
+          "yaw": 1.9124781608780097,
+          "pitch": 0.19768639955944067,
+          "title": "Cầu thang bộ T4-5",
+          "target": "6-cauthangbot5-9a46",
+          "transition": "zoom-in",
+          "description": "Lối lên tầng 5",
+          "icon": "arrow_left"
+        },
+        {
+          "id": "hs-dc017d",
+          "type": "Scene",
+          "yaw": 0.6835058789817349,
+          "pitch": -0.027261217017613193,
+          "title": "HÀNH LANG TẦNG 4",
+          "tooltipImage": "images/hs-dc017d-img_muntctuj.png",
+          "transition": "zoom-in",
+          "target": "4-hl-pdaotao-5190",
+          "description": "Sảnh hành lang tầng 4 kết nối khu vực học vụ và các khoa chuyên môn, phục vụ nhu cầu liên hệ công tác, tư vấn học vụ và di chuyển liên tầng nhanh chóng.\n",
+          "icon": "arrow"
+        },
+        {
+          "id": "hs-a4bbb8",
+          "type": "Scene",
+          "yaw": 4.780718966465038,
+          "pitch": -0.14543886676404072,
+          "title": "THANG MÁY",
+          "tooltipImage": "images/hs-a4bbb8-img_muntctuj.png",
+          "target": "thangmay1-ed3e",
+          "transition": "zoom-in",
+          "description": "Di chuyển đến được các tầng 1,4,5,6,7"
+        }
+      ],
+      "defaultYaw": 1.310040526984416,
+      "defaultPitch": -0.19345483328119428,
+      "mcVideo": "videos/4-sanht4-876f-mc_muntctuj.webm",
+      "mcVideoWidth": 450
+    },
+    {
+      "id": "4-hl-pdaotao-5190",
+      "title": "Hành lang T4",
+      "panorama": "images/4-hl-pdaotao-5190_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-43339f",
+          "type": "Gallery",
+          "yaw": 3.049216234351983,
+          "pitch": 0.01325069109305499,
+          "title": "PHÒNG ĐÀO TẠO",
+          "tooltipImage": "images/hs-43339f-img_muntctuj.png",
+          "transition": "zoom-in",
+          "gallery": [
+            "images/hs-43339f-g0_muntctuj.png",
+            "images/hs-43339f-g1_muntctuj.png"
+          ],
+          "icon": "home",
+          "description": "Phòng Đào tạo là đầu mối quản lý và tổ chức toàn diện công tác đào tạo của Nhà trường. Đơn vị phụ trách điều phối kế hoạch học tập, đăng ký môn học, tổ chức khảo thí, cấp phát văn bằng chứng chỉ và hỗ trợ giải quyết kịp thời mọi thủ tục học vụ cho sinh viên.\n"
+        },
+        {
+          "id": "hs-c954d0",
+          "type": "Scene",
+          "yaw": 4.539764874547476,
+          "pitch": -0.05093306262399966,
+          "title": "NƠI XIN DẤU ",
+          "tooltipImage": "images/hs-c954d0-img_muntctuj.png",
+          "target": "4-hl-dongdau-81df",
+          "transition": "zoom-in",
+          "description": "Nơi làm các thủ tục hành chính, xác nhận giấy tờ, đóng dấu cho Sinh viên",
+          "icon": "document"
+        },
+        {
+          "id": "hs-e3c26d",
+          "type": "Scene",
+          "yaw": 1.1024242484975997,
+          "pitch": -0.006068364406760951,
+          "title": "THANG MÁY",
+          "tooltipImage": "images/hs-e3c26d-img_muntctuj.png",
+          "target": "thangmay1-ed3e",
+          "transition": "zoom-in",
+          "description": "Di chuyển được đi các tầng 1,4,5,6,7"
+        },
+        {
+          "id": "hs-4eeaf5",
+          "type": "Scene",
+          "yaw": 1.388824811812747,
+          "pitch": -0.4941301256877044,
+          "title": "SẢNH TẦNG 4\nTòa nhà E4 - UEB",
+          "tooltipImage": "images/hs-4eeaf5-img_muntctuj.png",
+          "target": "4-sanht4-876f",
+          "transition": "zoom-in",
+          "description": "Sảnh hành lang tầng 4 kết nối khu vực học vụ và các khoa chuyên môn, phục vụ nhu cầu liên hệ công tác, tư vấn học vụ và di chuyển liên tầng nhanh chóng.\n"
+        },
+        {
+          "id": "hs-1bb545",
+          "type": "Website",
+          "yaw": 3.1777579123933597,
+          "pitch": 0.002969363601722952,
+          "title": "Website",
+          "icon": "globe",
+          "description": "Click để truy cập trang website của Phòng Đào tạo",
+          "tooltipImage": "images/hs-1bb545-img_muntctuj.png",
+          "transition": "zoom-in",
+          "target": "https://ueb.edu.vn/Don-Vi-Giang-Vien/UEB/don-vi-chuc-nang/1874/1948"
+        }
+      ],
+      "defaultYaw": 3.7265664499637388,
+      "defaultPitch": -0.12150938357066376
+    },
+    {
+      "id": "4-hl-dongdau-81df",
+      "title": "Nơi xin dấu - thủ tục hành chính",
+      "panorama": "images/4-hl-dongdau-81df_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-780d1a",
+          "type": "Scene",
+          "yaw": 5.329891843443357,
+          "pitch": -0.0307278252170351,
+          "title": "HÀNH LANG TẦNG 4",
+          "tooltipImage": "images/hs-780d1a-img_muntctuj.png",
+          "target": "4-hl-pdaotao-5190",
+          "transition": "zoom-in",
+          "description": "Sảnh hành lang tầng 4 kết nối khu vực học vụ và các khoa chuyên môn, phục vụ nhu cầu liên hệ công tác, tư vấn học vụ và di chuyển liên tầng nhanh chóng.\n",
+          "icon": "arrow_left"
+        },
+        {
+          "id": "hs-c54169",
+          "type": "Scene",
+          "yaw": 3.359364171226988,
+          "pitch": -0.12449615807624959,
+          "title": "KHOA KINH TẾ VÀ KINH DOANH QUỐC TẾ",
+          "tooltipImage": "images/hs-c54169-img_muntctuj.png",
+          "target": "4-kinhteqt1-d8d0",
+          "transition": "zoom-in",
+          "description": "Khoa Kinh tế và Kinh doanh Quốc tế (FIBE) sở hữu chương trình cử nhân đạt chuẩn kiểm định chất lượng quốc tế ACBSP (Hoa Kỳ), đóng góp đưa lĩnh vực Kinh tế & Kinh tế lượng vào Top 401–450 thế giới trên BXH QS. Với tỷ lệ sinh viên có việc làm sau tốt nghiệp đạt trên 95% cùng môi trường đào tạo chuyên ngành bằng tiếng Anh, sinh viên FIBE vững vàng năng lực cạnh tranh trong các chuỗi cung ứng, tập đoàn đa quốc gia và tổ chức tài chính toàn cầu.\n",
+          "icon": "home"
+        },
+        {
+          "id": "hs-d6112c",
+          "type": "Gallery",
+          "yaw": 2.3846478051379476,
+          "pitch": -0.09617028996059052,
+          "title": "PHÒNG KẾ HOẠCH - TÀI CHÍNH",
+          "icon": "camera",
+          "tooltipImage": "images/hs-d6112c-img_muntctuj.png",
+          "gallery": [
+            "images/hs-d6112c-g0_muntctuj.jpg",
+            "images/hs-d6112c-g1_muntctuj.jpg"
+          ]
+        },
+        {
+          "id": "hs-d93709",
+          "type": "Website",
+          "yaw": 2.4773356384991847,
+          "pitch": -0.09512458612039554,
+          "title": "Website",
+          "icon": "globe",
+          "tooltipImage": "images/hs-d93709-img_muntctuj.png",
+          "target": "https://ueb.edu.vn/Don-Vi-Giang-Vien/UEB/DON-VI-CHUC-NANG/1874/1950",
+          "description": "Click để truy cập trang website của Phòng Kế hoạch - Tài chính"
+        }
+      ],
+      "defaultYaw": 0.18435653201811353,
+      "defaultPitch": -0.03571594606732109
+    },
+    {
+      "id": "4-kinhteqt1-d8d0",
+      "title": "Khoa KTQT - P.Khach",
+      "panorama": "images/4-kinhteqt1-d8d0_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-013b86",
+          "type": "Scene",
+          "yaw": 2.1609862965048405,
+          "pitch": -0.0961438391094589,
+          "title": "KHOA KINH TẾ VÀ KINH DOANH QUỐC TẾ\nKhu vực làm việc Giảng viên",
+          "tooltipImage": "images/hs-013b86-img_muntctuj.png",
+          "target": "4-kinhteqt2-3c12",
+          "transition": "zoom-in",
+          "icon": "user",
+          "description": "Khoa Kinh tế và Kinh doanh Quốc tế (FIBE) sở hữu chương trình cử nhân đạt chuẩn kiểm định chất lượng quốc tế ACBSP (Hoa Kỳ), đóng góp đưa lĩnh vực Kinh tế & Kinh tế lượng vào Top 401–450 thế giới trên BXH QS. Với tỷ lệ sinh viên có việc làm sau tốt nghiệp đạt trên 95% cùng môi trường đào tạo chuyên ngành bằng tiếng Anh, sinh viên FIBE vững vàng năng lực cạnh tranh trong các chuỗi cung ứng, tập đoàn đa quốc gia và tổ chức tài chính toàn cầu.\n"
+        },
+        {
+          "id": "hs-b0f9d8",
+          "type": "Scene",
+          "yaw": 6.2127047572679075,
+          "pitch": -0.14631456907580298,
+          "title": "NƠI XIN DẤU",
+          "tooltipImage": "images/hs-b0f9d8-img_muntctuj.png",
+          "target": "4-hl-dongdau-81df",
+          "transition": "zoom-in",
+          "description": "Nơi làm các thủ tục hành chính, xác nhận giấy tờ, đóng dấu cho Sinh viên"
+        },
+        {
+          "id": "hs-08dee0",
+          "type": "Gallery",
+          "yaw": 2.592224836251359,
+          "pitch": -0.14083666732606703,
+          "title": "Thư viện ảnh",
+          "tooltipImage": "images/hs-08dee0-img_muntctuj.png",
+          "gallery": [
+            "images/hs-08dee0-g0_muntctuj.jpg",
+            "images/hs-08dee0-g1_muntctuj.jpg",
+            "images/hs-08dee0-g2_muntctuj.jpg"
+          ],
+          "icon": "camera"
+        },
+        {
+          "id": "hs-3ff0fe",
+          "type": "Website",
+          "yaw": 2.596884507401509,
+          "pitch": -0.22940934486515507,
+          "title": "Website",
+          "icon": "globe",
+          "tooltipImage": "images/hs-3ff0fe-img_muntctuj.png",
+          "target": "https://ueb.edu.vn/Don-Vi-Giang-Vien/UEB/don-vi-dao-tao/1873/1930",
+          "description": "Click để truy cập trang website của Khoa Kinh tế và Kinh doanh Quốc tế\n"
+        }
+      ],
+      "defaultYaw": 2.4949970945437108,
+      "defaultPitch": -0.11843526873120647
+    },
+    {
+      "id": "4-kinhteqt2-3c12",
+      "title": "Khoa KTQT - Khu vực làm việc Giảng viên",
+      "panorama": "images/4-kinhteqt2-3c12_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-9e39cc",
+          "type": "Scene",
+          "yaw": 5.820178361077865,
+          "pitch": -0.07041067034279869,
+          "title": "KHOA KINH TẾ VÀ KINH DOANH QUỐC TẾ\nVăn phòng",
+          "tooltipImage": "images/hs-9e39cc-img_muntctuj.png",
+          "target": "4-kinhteqt1-d8d0",
+          "transition": "zoom-in",
+          "description": "Khoa Kinh tế và Kinh doanh Quốc tế (FIBE) sở hữu chương trình cử nhân đạt chuẩn kiểm định chất lượng quốc tế ACBSP (Hoa Kỳ), đóng góp đưa lĩnh vực Kinh tế & Kinh tế lượng vào Top 401–450 thế giới trên BXH QS. Với tỷ lệ sinh viên có việc làm sau tốt nghiệp đạt trên 95% cùng môi trường đào tạo chuyên ngành bằng tiếng Anh, sinh viên FIBE vững vàng năng lực cạnh tranh trong các chuỗi cung ứng, tập đoàn đa quốc gia và tổ chức tài chính toàn cầu.\n",
+          "icon": "home"
+        },
+        {
+          "id": "hs-50717b",
+          "type": "Scene",
+          "yaw": 6.194125433173025,
+          "pitch": 0.014504140763866857,
+          "title": "Nơi xin dấu - Thủ tục hành chính",
+          "target": "4-hl-dongdau-81df",
+          "transition": "zoom-in",
+          "tooltipImage": "images/hs-50717b-img_muntctuj.png",
+          "description": "Nơi làm các thủ tục hành chính, xác nhận giấy tờ, đóng dấu cho Sinh viên",
+          "icon": "document"
+        },
+        {
+          "id": "hs-49ce85",
+          "type": "Gallery",
+          "yaw": 2.7639012786144663,
+          "pitch": 0.10738911864249245,
+          "title": "Thư viện ảnh",
+          "icon": "camera",
+          "tooltipImage": "images/hs-49ce85-img_muntctuj.png",
+          "gallery": [
+            "images/hs-49ce85-g0_muntctuj.jpg",
+            "images/hs-49ce85-g1_muntctuj.jpg",
+            "images/hs-49ce85-g2_muntctuj.jpg"
+          ]
+        },
+        {
+          "id": "hs-de21ea",
+          "type": "Website",
+          "yaw": 2.859495082482464,
+          "pitch": 0.10453626960661899,
+          "title": "Website",
+          "icon": "globe",
+          "description": "Click để truy cập trang website của Khoa  Kinh tế và Kinh doanh Quốc tế",
+          "tooltipImage": "images/hs-de21ea-img_muntctuj.png",
+          "target": "https://ueb.edu.vn/Don-Vi-Giang-Vien/UEB/don-vi-dao-tao/1873/1930"
+        }
+      ],
+      "defaultYaw": 3.648719712612391,
+      "defaultPitch": -0.12633884710548182
+    },
+    {
+      "id": "6-cauthangbot5-9a46",
+      "title": "Cầu thang bộ T4-5",
+      "panorama": "images/6-cauthangbot5-9a46_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-4ad787",
+          "type": "Scene",
+          "yaw": 5.4866600563300985,
+          "pitch": 0.20884021739484737,
+          "title": "SẢNH TẦNG 5\nTòa nhà E4 - UEB",
+          "tooltipImage": "images/hs-4ad787-img_muntctuj.png",
+          "target": "5-sanht5-891a",
+          "transition": "zoom-in",
+          "description": "Sảnh hành lang tầng 5 kết nối khu vực Không gian Sáng tạo UEB, Phòng Truyền thống, Phòng Nghiên cứu Khoa học và Hợp tác phát triển cùng các phòng học chất lượng cao phục vụ sinh viên Viện Đào tạo Quốc tế.\n"
+        },
+        {
+          "id": "hs-9f00dd",
+          "type": "Scene",
+          "yaw": 5.086170479471805,
+          "pitch": -0.4169866391578352,
+          "title": "SẢNH TẦNG 4\nTòa nhà E4 - UEB",
+          "tooltipImage": "images/hs-9f00dd-img_muntctuj.png",
+          "target": "4-sanht4-876f",
+          "transition": "zoom-in",
+          "description": "Sảnh hành lang tầng 4 kết nối khu vực học vụ và các khoa chuyên môn, phục vụ nhu cầu liên hệ công tác, tư vấn học vụ và di chuyển liên tầng nhanh chóng.\n"
+        }
+      ],
+      "defaultYaw": 5.1227803337962845,
+      "defaultPitch": -0.12147753299597586
+    },
+    {
+      "id": "5-sanht5-891a",
+      "title": "Sảnh T5",
+      "panorama": "images/5-sanht5-891a_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-b1effe",
+          "type": "Scene",
+          "yaw": 5.061428492131198,
+          "pitch": 0.1509359997840154,
+          "title": "Cầu thang bộ T5-6",
+          "target": "6-cauthangbot6-f884",
+          "tooltipImage": "images/hs-b1effe-img_muntctuj.png",
+          "transition": "zoom-in",
+          "description": "Lối lên tầng 6",
+          "icon": "arrow_left"
+        },
+        {
+          "id": "hs-a83c66",
+          "type": "Scene",
+          "yaw": 4.70115559659293,
+          "pitch": -0.27077597192170066,
+          "title": "Cầu thang bộ T4-5",
+          "target": "6-cauthangbot5-9a46",
+          "tooltipImage": "images/hs-a83c66-img_muntctuj.png",
+          "transition": "zoom-in",
+          "description": "Lối lên xuống tầng 4",
+          "icon": "arrow"
+        },
+        {
+          "id": "hs-86c4a0",
+          "type": "Scene",
+          "yaw": 3.7283132235270373,
+          "pitch": -0.03816853152216293,
+          "title": "HÀNH LANG TẦNG 5",
+          "tooltipImage": "images/hs-86c4a0-img_muntctuj.png",
+          "target": "5hlt5-truynthong-1704",
+          "transition": "zoom-in",
+          "description": "Sảnh hành lang tầng 5 kết nối khu vực Không gian Sáng tạo UEB, Phòng Truyền thống, Phòng Nghiên cứu Khoa học và Hợp tác phát triển cùng các phòng học chất lượng cao phục vụ sinh viên Viện Đào tạo Quốc tế.",
+          "icon": "arrow"
+        },
+        {
+          "id": "hs-f148b7",
+          "type": "Scene",
+          "yaw": 1.7312218363599607,
+          "pitch": -0.14172950147354668,
+          "title": "THANG MÁY",
+          "tooltipImage": "images/hs-f148b7-img_muntctuj.png",
+          "target": "thangmay1-ed3e",
+          "transition": "zoom-in",
+          "description": "Di chuyển đến được các tầng 1,4,5,6,7"
+        },
+        {
+          "id": "hs-cf1e04",
+          "type": "Scene",
+          "yaw": 2.428200827307999,
+          "pitch": -0.04914100141524669,
+          "title": "HÀNH LANG TẦNG 5",
+          "tooltipImage": "images/hs-cf1e04-img_muntctuj.png",
+          "target": "5-hlt5-cbde",
+          "transition": "zoom-in",
+          "description": "Sảnh hành lang tầng 5 kết nối khu vực Không gian Sáng tạo UEB, Phòng Truyền thống, Phòng Nghiên cứu Khoa học và Hợp tác phát triển cùng các phòng học chất lượng cao phục vụ sinh viên Viện Đào tạo Quốc tế.",
+          "icon": "arrow_left"
+        }
+      ],
+      "defaultYaw": 4.590861957804857,
+      "defaultPitch": -0.09525721414932242,
+      "mcVideo": "videos/5-sanht5-891a-mc_muntctuj.webm",
+      "mcVideoWidth": 450
+    },
+    {
+      "id": "5hlt5-truynthong-1704",
+      "title": "Hành lang T5",
+      "panorama": "images/5hlt5-truynthong-1704_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-7ea220",
+          "type": "Scene",
+          "yaw": 0.07925941358356987,
+          "pitch": -0.003623655981842111,
+          "title": "KHÔNG GIAN SÁNG TẠO\nLối vào",
+          "description": "Không gian sáng tạo UEB\nKhông chỉ là nơi khơi nguồn cảm hứng, Không gian sáng tạo còn trở thành điểm check-in “huyền thoại” của UEBers và các đối tác khi ghé thăm UEB.\nMang đậm vibe hoàng gia sang trọng và tinh tế, không gian gây ấn tượng bởi sự chỉn chu trong từng chi tiết – từ chiếc đàn piano, những bức tranh nghệ thuật đến hệ thống đèn được bố trí hài hòa. Tất cả cùng tạo nên một tổng thể đẹp mắt, ấn tượng và đầy cảm hứng, nơi mỗi góc nhỏ đều có thể trở thành một khung hình đáng nhớ.\n",
+          "tooltipImage": "images/hs-7ea220-img_muntctuj.png",
+          "target": "5-cuakhonggiansangtao-6f26",
+          "transition": "zoom-in"
+        },
+        {
+          "id": "hs-d8d4db",
+          "type": "Scene",
+          "yaw": 3.7859199971816713,
+          "pitch": -0.05062943315961732,
+          "title": "PHÒNG TRUYỀN THỐNG",
+          "description": "Phòng Truyền thống là không gian trang trọng lưu giữ những mốc son lịch sử vẻ vang và giá trị cốt lõi trên hành trình phát triển của Nhà trường. Đây đồng thời là không gian đối ngoại đặc biệt, nơi thường xuyên diễn ra các sự kiện đón tiếp đoàn Đại sứ quán như Đại sứ quán Anh, Ba Lan, Liên bang Nga, ... cùng đại diện những trường đại học đối tác trên toàn thế giới.\n",
+          "tooltipImage": "images/hs-d8d4db-img_muntctuj.png",
+          "target": "5-phongtruyenthong-5114",
+          "transition": "zoom-in",
+          "icon": "home"
+        },
+        {
+          "id": "hs-bbb03d",
+          "type": "Scene",
+          "yaw": 3.120153756434319,
+          "pitch": -0.05551021930467437,
+          "title": "SẢNH TẦNG 5\nTòa nhà E4 - UEB",
+          "tooltipImage": "images/hs-bbb03d-img_muntctuj.png",
+          "target": "5-sanht5-891a",
+          "transition": "zoom-in",
+          "description": "Sảnh hành lang tầng 5 kết nối khu vực Không gian Sáng tạo UEB, Phòng Truyền thống, Phòng Nghiên cứu Khoa học và Hợp tác phát triển cùng các phòng học chất lượng cao phục vụ sinh viên Viện Đào tạo Quốc tế.\n"
+        },
+        {
+          "id": "hs-b45918",
+          "type": "Gallery",
+          "yaw": 5.978590617996941,
+          "pitch": -0.07620420229083358,
+          "title": "TRUNG TÂM ĐẢM BẢO CHẤT LƯỢNG GIÁO DỤC",
+          "tooltipImage": "images/hs-b45918-img_muntctuj.png",
+          "gallery": [
+            "images/hs-b45918-g0_muntctuj.png",
+            "images/hs-b45918-g1_muntctuj.jpg"
+          ],
+          "icon": "camera"
+        },
+        {
+          "id": "hs-d3aa29",
+          "type": "Website",
+          "yaw": 5.9807846665885895,
+          "pitch": -0.17743157106058094,
+          "title": "Website",
+          "icon": "globe",
+          "target": "https://ueb.edu.vn/Don-Vi-Giang-Vien/UEB/don-vi-chuc-nang/1874/1956",
+          "tooltipImage": "images/hs-d3aa29-img_muntctuj.png",
+          "description": "Click để truy cập trang website của Trung tâm Đảm bảo Chất lượng giáo dục"
+        }
+      ],
+      "defaultYaw": 0.20582853590730193,
+      "defaultPitch": -0.028309771109551907
+    },
+    {
+      "id": "5-phongtruyenthong-5114",
+      "title": "Phòng truyền thống",
+      "panorama": "images/5-phongtruyenthong-5114_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-610827",
+          "type": "Scene",
+          "yaw": 1.4421391045971197,
+          "pitch": -0.12663195543746286,
+          "title": "HÀNH LANG TẦNG 5",
+          "tooltipImage": "images/hs-610827-img_muntctuj.png",
+          "target": "5hlt5-truynthong-1704",
+          "transition": "zoom-in",
+          "description": "Sảnh hành lang tầng 5 kết nối khu vực Không gian Sáng tạo UEB, Phòng Truyền thống, Phòng Nghiên cứu Khoa học và Hợp tác phát triển cùng các phòng học chất lượng cao phục vụ sinh viên Viện Đào tạo Quốc tế.",
+          "icon": "arrow"
+        },
+        {
+          "id": "hs-173c75",
+          "type": "Gallery",
+          "yaw": 0.15602053693859821,
+          "pitch": -0.19398646005689235,
+          "title": "Thư viện ảnh",
+          "icon": "camera",
+          "tooltipImage": "images/hs-173c75-img_muntctuj.png",
+          "gallery": [
+            "images/hs-173c75-g0_muntctuj.jpg",
+            "images/hs-173c75-g1_muntctuj.jpg",
+            "images/hs-173c75-g2_muntctuj.jpg"
+          ]
+        }
+      ],
+      "defaultYaw": 3.2402119291587845,
+      "defaultPitch": -0.19788850699439475
+    },
+    {
+      "id": "5-hlt5-cbde",
+      "title": "Hành lang T5 - phòng NCKH",
+      "panorama": "images/5-hlt5-cbde_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-3014c7",
+          "type": "Scene",
+          "yaw": 4.114756934250893,
+          "pitch": -0.3741321913792428,
+          "title": "SẢNH TẦNG 5\nTòa nhà E4 - UEB",
+          "tooltipImage": "images/hs-3014c7-img_muntctuj.png",
+          "target": "5-sanht5-891a",
+          "transition": "zoom-in",
+          "description": "Sảnh hành lang tầng 5 kết nối khu vực Không gian Sáng tạo UEB, Phòng Truyền thống, Phòng Nghiên cứu Khoa học và Hợp tác phát triển cùng các phòng học chất lượng cao phục vụ sinh viên Viện Đào tạo Quốc tế.\n"
+        },
+        {
+          "id": "hs-883121",
+          "type": "Scene",
+          "yaw": 3.1202580624843135,
+          "pitch": -0.06451654991734967,
+          "title": "HÀNH LANG TẦNG 5",
+          "tooltipImage": "images/hs-883121-img_muntctuj.png",
+          "target": "5hlt5-truynthong-1704",
+          "transition": "zoom-in",
+          "description": "Sảnh hành lang tầng 5 kết nối khu vực Không gian Sáng tạo UEB, Phòng Truyền thống, Phòng Nghiên cứu Khoa học và Hợp tác phát triển cùng các phòng học chất lượng cao phục vụ sinh viên Viện Đào tạo Quốc tế.",
+          "icon": "arrow_up"
+        },
+        {
+          "id": "hs-683be5",
+          "type": "Scene",
+          "yaw": 3.699429645420792,
+          "pitch": 0.0864852190524632,
+          "title": "Cầu thang bộ T5-6",
+          "tooltipImage": "images/hs-683be5-img_muntctuj.png",
+          "target": "6-cauthangbot6-f884",
+          "transition": "zoom-in",
+          "icon": "arrow_left",
+          "description": "Lối lên tầng 6"
+        },
+        {
+          "id": "hs-076458",
+          "type": "Scene",
+          "yaw": 3.492291986076802,
+          "pitch": -0.2506265509342773,
+          "title": "Thang bộ T4-5",
+          "tooltipImage": "images/hs-076458-img_muntctuj.png",
+          "target": "6-cauthangbot5-9a46",
+          "transition": "zoom-in",
+          "icon": "arrow",
+          "description": "Lối xuống tầng 4"
+        },
+        {
+          "id": "hs-b867ea",
+          "type": "Scene",
+          "yaw": 2.9426458652328575,
+          "pitch": -0.049131480150777396,
+          "title": "PHÒNG TRUYỀN THỐNG",
+          "tooltipImage": "images/hs-b867ea-img_muntctuj.png",
+          "target": "5-phongtruyenthong-5114",
+          "transition": "zoom-in",
+          "description": "Phòng Truyền thống là không gian trang trọng lưu giữ những mốc son lịch sử vẻ vang và giá trị cốt lõi trên hành trình phát triển của Nhà trường. Đây đồng thời là không gian đối ngoại đặc biệt, nơi thường xuyên diễn ra các sự kiện đón tiếp đoàn Đại sứ quán như Đại sứ quán Anh, Ba Lan, Liên bang Nga, ... cùng đại diện những trường đại học đối tác trên toàn thế giới.\n",
+          "icon": "home"
+        },
+        {
+          "id": "hs-6e93b9",
+          "type": "Gallery",
+          "yaw": 0.5339278544679831,
+          "pitch": 0.07373948508232209,
+          "title": "PHÒNG NGHIÊN CỨU KHOA HỌC VÀ HỢP TÁC PHÁT TRIỂN",
+          "tooltipImage": "images/hs-6e93b9-img_muntctuj.png",
+          "icon": "camera",
+          "gallery": [
+            "images/hs-6e93b9-g0_muntctuj.jpg"
+          ]
+        },
+        {
+          "id": "hs-24ac31",
+          "type": "Website",
+          "yaw": 0.6112021005809471,
+          "pitch": 0.08771040849434963,
+          "title": "Website",
+          "target": "https://ueb.edu.vn/Don-Vi-Giang-Vien/UEB/don-vi-chuc-nang/1874/1951",
+          "description": "Click để truy cập trang website của Phòng Nghiên cứu Khoa học và Hợp tác phát triển ",
+          "tooltipImage": "images/hs-24ac31-img_muntctuj.png",
+          "icon": "globe"
+        }
+      ],
+      "defaultYaw": 0.46617332702566633,
+      "defaultPitch": -0.010135706152957003
+    },
+    {
+      "id": "5-cuakhonggiansangtao-6f26",
+      "title": "Cửa không gian sáng tạo",
+      "panorama": "images/5-cuakhonggiansangtao-6f26_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-f2f187",
+          "type": "Scene",
+          "yaw": 1.0431931868360471,
+          "pitch": 0.04417172723429075,
+          "title": "KHÔNG GIAN SÁNG TẠO\nView 1",
+          "tooltipImage": "images/hs-f2f187-img_muntctuj.png",
+          "target": "5-khonggianst1-ae0a",
+          "transition": "zoom-in",
+          "description": "Không gian sáng tạo UEB\nKhông chỉ là nơi khơi nguồn cảm hứng, Không gian sáng tạo còn trở thành điểm check-in “huyền thoại” của UEBers và các đối tác khi ghé thăm UEB.\nMang đậm vibe hoàng gia sang trọng và tinh tế, không gian gây ấn tượng bởi sự chỉn chu trong từng chi tiết – từ chiếc đàn piano, những bức tranh nghệ thuật đến hệ thống đèn được bố trí hài hòa. Tất cả cùng tạo nên một tổng thể đẹp mắt, ấn tượng và đầy cảm hứng, nơi mỗi góc nhỏ đều có thể trở thành một khung hình đáng nhớ.\n",
+          "icon": "map"
+        },
+        {
+          "id": "hs-c5372c",
+          "type": "Scene",
+          "yaw": 1.2518117508032611,
+          "pitch": 0.006496402359104758,
+          "title": "KHÔNG GIAN SÁNG TẠO\nView 2",
+          "transition": "zoom-in",
+          "target": "5-khonggianst2-9b87",
+          "description": "Không gian sáng tạo UEB\nKhông chỉ là nơi khơi nguồn cảm hứng, Không gian sáng tạo còn trở thành điểm check-in “huyền thoại” của UEBers và các đối tác khi ghé thăm UEB.\nMang đậm vibe hoàng gia sang trọng và tinh tế, không gian gây ấn tượng bởi sự chỉn chu trong từng chi tiết – từ chiếc đàn piano, những bức tranh nghệ thuật đến hệ thống đèn được bố trí hài hòa. Tất cả cùng tạo nên một tổng thể đẹp mắt, ấn tượng và đầy cảm hứng, nơi mỗi góc nhỏ đều có thể trở thành một khung hình đáng nhớ.\n",
+          "tooltipImage": "images/hs-c5372c-img_muntctuj.png",
+          "icon": "map"
+        },
+        {
+          "id": "hs-b4f912",
+          "type": "Scene",
+          "yaw": 3.002761933697443,
+          "pitch": -0.043605592876498456,
+          "title": "HÀNH LANG TẦNG 5",
+          "transition": "zoom-in",
+          "target": "5hlt5-truynthong-1704",
+          "description": "Sảnh hành lang tầng 5 kết nối khu vực Không gian Sáng tạo UEB, Phòng Truyền thống, Phòng Nghiên cứu Khoa học và Hợp tác phát triển cùng các phòng học chất lượng cao phục vụ sinh viên Viện Đào tạo Quốc tế.",
+          "tooltipImage": "images/hs-b4f912-img_muntctuj.png"
+        },
+        {
+          "id": "hs-ee214c",
+          "type": "Gallery",
+          "yaw": 3.3206933898064586,
+          "pitch": -0.05316933427404047,
+          "title": "PHÒNG TỔ CHỨC NHÂN SỰ",
+          "icon": "camera",
+          "tooltipImage": "images/hs-ee214c-img_muntctuj.png",
+          "gallery": [
+            "images/hs-ee214c-g0_muntctuj.jpg",
+            "images/hs-ee214c-g1_muntctuj.jpg"
+          ]
+        }
+      ],
+      "defaultYaw": 0.5212293634540118,
+      "defaultPitch": -0.09673763999619434
+    },
+    {
+      "id": "5-khonggianst1-ae0a",
+      "title": "Không gian sáng tạo 1",
+      "panorama": "images/5-khonggianst1-ae0a_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-bd65c9",
+          "type": "Scene",
+          "yaw": 2.707819007383869,
+          "pitch": -0.03130751723260983,
+          "title": "KHÔNG GIAN SÁNG TẠO\nView 2",
+          "target": "5-khonggianst2-9b87",
+          "transition": "zoom-in",
+          "description": "Không gian sáng tạo UEB\nKhông chỉ là nơi khơi nguồn cảm hứng, Không gian sáng tạo còn trở thành điểm check-in “huyền thoại” của UEBers và các đối tác khi ghé thăm UEB.\nMang đậm vibe hoàng gia sang trọng và tinh tế, không gian gây ấn tượng bởi sự chỉn chu trong từng chi tiết – từ chiếc đàn piano, những bức tranh nghệ thuật đến hệ thống đèn được bố trí hài hòa. Tất cả cùng tạo nên một tổng thể đẹp mắt, ấn tượng và đầy cảm hứng, nơi mỗi góc nhỏ đều có thể trở thành một khung hình đáng nhớ.",
+          "tooltipImage": "images/hs-bd65c9-img_muntctuj.png",
+          "icon": "map"
+        },
+        {
+          "id": "hs-5fd98d",
+          "type": "Scene",
+          "yaw": 5.547355642194663,
+          "pitch": -0.08537659305007583,
+          "title": "KHÔNG GIAN SÁNG TẠO\nLối vào",
+          "tooltipImage": "images/hs-5fd98d-img_muntctuj.png",
+          "target": "5-cuakhonggiansangtao-6f26",
+          "transition": "zoom-in",
+          "description": "Không gian sáng tạo UEB\nKhông chỉ là nơi khơi nguồn cảm hứng, Không gian sáng tạo còn trở thành điểm check-in “huyền thoại” của UEBers và các đối tác khi ghé thăm UEB.\nMang đậm vibe hoàng gia sang trọng và tinh tế, không gian gây ấn tượng bởi sự chỉn chu trong từng chi tiết – từ chiếc đàn piano, những bức tranh nghệ thuật đến hệ thống đèn được bố trí hài hòa. Tất cả cùng tạo nên một tổng thể đẹp mắt, ấn tượng và đầy cảm hứng, nơi mỗi góc nhỏ đều có thể trở thành một khung hình đáng nhớ."
+        },
+        {
+          "id": "hs-82272d",
+          "type": "Scene",
+          "yaw": 1.7933684114937647,
+          "pitch": -0.14082055005009675,
+          "title": "PHÒNG HỌC",
+          "target": "t7-4bbb",
+          "transition": "zoom-in",
+          "tooltipImage": "images/hs-82272d-img_muntctuj.png",
+          "description": "Hệ thống phòng học chất lượng cao phục vụ sinh viên Viện Đào tạo Quốc tế, mang đến một môi trường học tập chuyên nghiệp, tiện nghi và hội nhập.",
+          "icon": "home"
+        },
+        {
+          "id": "hs-1ece76",
+          "type": "Scene",
+          "yaw": 2.3880097957357926,
+          "pitch": -0.09691519888889522,
+          "title": "PHÒNG HỌC",
+          "tooltipImage": "images/hs-1ece76-img_muntctuj.png",
+          "target": "t7-3569",
+          "description": "Hệ thống phòng học chất lượng cao phục vụ sinh viên Viện Đào tạo Quốc tế, mang đến một môi trường học tập chuyên nghiệp, tiện nghi và hội nhập.",
+          "transition": "zoom-in",
+          "icon": "home"
+        }
+      ],
+      "defaultYaw": 0.21608831089069472,
+      "defaultPitch": 0.06992159256239772
+    },
+    {
+      "id": "5-khonggianst2-9b87",
+      "title": "Không gian sáng tạo 2",
+      "panorama": "images/5-khonggianst2-9b87_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-789e62",
+          "type": "Scene",
+          "yaw": 3.0407108008389137,
+          "pitch": -0.0387416472020603,
+          "title": "KHÔNG GIAN SÁNG TẠO\nView 1",
+          "tooltipImage": "images/hs-789e62-img_muntctuj.png",
+          "target": "5-khonggianst1-ae0a",
+          "transition": "zoom-in",
+          "icon": "map",
+          "description": "Không gian sáng tạo UEB\nKhông chỉ là nơi khơi nguồn cảm hứng, Không gian sáng tạo còn trở thành điểm check-in “huyền thoại” của UEBers và các đối tác khi ghé thăm UEB.\nMang đậm vibe hoàng gia sang trọng và tinh tế, không gian gây ấn tượng bởi sự chỉn chu trong từng chi tiết – từ chiếc đàn piano, những bức tranh nghệ thuật đến hệ thống đèn được bố trí hài hòa. Tất cả cùng tạo nên một tổng thể đẹp mắt, ấn tượng và đầy cảm hứng, nơi mỗi góc nhỏ đều có thể trở thành một khung hình đáng nhớ."
+        },
+        {
+          "id": "hs-0e9ec4",
+          "type": "Scene",
+          "yaw": 3.3930526001526937,
+          "pitch": -0.044960188435964055,
+          "title": "PHÒNG HỌC",
+          "target": "t7-4bbb",
+          "tooltipImage": "images/hs-0e9ec4-img_muntctuj.png",
+          "transition": "zoom-in",
+          "description": "Hệ thống phòng học chất lượng cao phục vụ sinh viên Viện Đào tạo Quốc tế, mang đến một môi trường học tập chuyên nghiệp, tiện nghi và hội nhập.",
+          "icon": "home"
+        },
+        {
+          "id": "hs-0386ad",
+          "type": "Scene",
+          "yaw": 3.6177743790638774,
+          "pitch": -0.05565448698470665,
+          "title": "PHÒNG HỌC",
+          "tooltipImage": "images/hs-0386ad-img_muntctuj.png",
+          "transition": "zoom-in",
+          "target": "t7-3569",
+          "description": "Hệ thống phòng học chất lượng cao phục vụ sinh viên Viện Đào tạo Quốc tế, mang đến một môi trường học tập chuyên nghiệp, tiện nghi và hội nhập.",
+          "icon": "home"
+        },
+        {
+          "id": "hs-aeed1e",
+          "type": "Scene",
+          "yaw": 5.193850953938226,
+          "pitch": -0.13342009256962295,
+          "title": "PHÒNG HỌC",
+          "icon": "home",
+          "description": "Hệ thống phòng học chất lượng cao phục vụ sinh viên Viện Đào tạo Quốc tế, mang đến một môi trường học tập chuyên nghiệp, tiện nghi và hội nhập.",
+          "target": "t7-4bbb",
+          "tooltipImage": "images/hs-aeed1e-img_muntctuj.png"
+        },
+        {
+          "id": "hs-6c1671",
+          "type": "Video",
+          "yaw": 5.515001885143633,
+          "pitch": -0.02840768117127679,
+          "title": "Video",
+          "icon": "video",
+          "tooltipImage": "images/hs-6c1671-img_muntctuj.png",
+          "target": "images/hs-6c1671-target_muntctuj.mp4",
+          "isEmbedded": false,
+          "description": "Click để xem video"
+        }
+      ],
+      "defaultYaw": 0.11268186571251576,
+      "defaultPitch": 0.019177445657760472
+    },
+    {
+      "id": "6-cauthangbot6-f884",
+      "title": "Cầu thang bộ T5-6",
+      "panorama": "images/6-cauthangbot6-f884_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-4e78a8",
+          "type": "Scene",
+          "yaw": 3.7473940501855916,
+          "pitch": 0.19279225610283168,
+          "title": "SẢNH TẦNG 6\nTòa nhà E4 - UEB",
+          "tooltipImage": "images/hs-4e78a8-img_muntctuj.png",
+          "target": "6-sanht6-4242",
+          "transition": "zoom-in",
+          "description": "Khu vực làm việc của Ban Giám hiệu – nơi điều hành chung mọi hoạt động và định hướng chiến lược phát triển của Trường Đại học Kinh tế."
+        },
+        {
+          "id": "hs-31382b",
+          "type": "Scene",
+          "yaw": 3.311728842684499,
+          "pitch": -0.4340257788527171,
+          "title": "SẢNH TẦNG 5\nTòa nhà E4 - UEB",
+          "tooltipImage": "images/hs-31382b-img_muntctuj.png",
+          "target": "5-sanht5-891a",
+          "transition": "zoom-in",
+          "description": "Sảnh hành lang tầng 5 kết nối khu vực Không gian Sáng tạo UEB, Phòng Truyền thống, Phòng Nghiên cứu Khoa học và Hợp tác phát triển cùng các phòng học chất lượng cao phục vụ sinh viên Viện Đào tạo Quốc tế."
+        }
+      ],
+      "defaultYaw": 3.2886759276671667,
+      "defaultPitch": -0.06690319878689976
+    },
+    {
+      "id": "6-sanht6-4242",
+      "title": "Sảnh T6",
+      "panorama": "images/6-sanht6-4242_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-5bcd84",
+          "type": "Scene",
+          "yaw": 5.105865416888608,
+          "pitch": -0.13209257246981188,
+          "title": "THANG MÁY",
+          "tooltipImage": "images/hs-5bcd84-img_muntctuj.png",
+          "target": "thangmay1-ed3e",
+          "transition": "zoom-in",
+          "description": "Di chuyển đến được các tầng 1,4,5,6,7"
+        },
+        {
+          "id": "hs-801e66",
+          "type": "Scene",
+          "yaw": 1.616849428717509,
+          "pitch": -0.4189426509601073,
+          "title": "Cầu thang bộ T5-6",
+          "target": "6-cauthangbot6-f884",
+          "tooltipImage": "images/hs-801e66-img_muntctuj.png",
+          "transition": "zoom-in",
+          "description": "Lối xuống tầng 5"
+        },
+        {
+          "id": "hs-ad6d37",
+          "type": "Scene",
+          "yaw": 2.323245946694302,
+          "pitch": 0.0033962303645043157,
+          "title": "Thang bộ T6-7",
+          "tooltipImage": "images/hs-ad6d37-img_muntctuj.png",
+          "target": "6-cauthangbot6-bf60",
+          "transition": "zoom-in",
+          "description": "Lối lên tầng 7"
+        }
+      ],
+      "defaultYaw": 0.07412684295863964,
+      "defaultPitch": -0.20516457394230825,
+      "mcVideo": "videos/6-sanht6-4242-mc_muntctuj.webm",
+      "mcVideoWidth": 450
+    },
+    {
+      "id": "6-cauthangbot6-bf60",
+      "title": "Cầu thang bộ T6-7",
+      "panorama": "images/6-cauthangbot6-bf60_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-034cfe",
+          "type": "Scene",
+          "yaw": 3.776374826152321,
+          "pitch": 0.1253378883997085,
+          "title": "SẢNH TẦNG 7",
+          "tooltipImage": "images/hs-034cfe-img_muntctuj.png",
+          "target": "7-sanh7-dd3c",
+          "transition": "zoom-in",
+          "description": "Đây là nơi làm việc của 3 khoa bao gồm: Khoa Kinh tế Phát triển, Khoa Tài chính Ngân hàng, Khoa Kế toán - Kiểm toán, cùng Studio sản xuất hình ảnh và Phòng Truyền thông của Nhà trường."
+        },
+        {
+          "id": "hs-5d0454",
+          "type": "Scene",
+          "yaw": 3.3522914295309816,
+          "pitch": -0.4556689800478493,
+          "title": "SẢNH TẦNG 6",
+          "transition": "zoom-in",
+          "target": "6-sanht6-4242",
+          "tooltipImage": "images/hs-5d0454-img_muntctuj.png",
+          "description": "Khu vực làm việc của Ban Giám hiệu – nơi điều hành chung mọi hoạt động và định hướng chiến lược phát triển của Trường Đại học Kinh tế."
+        }
+      ],
+      "defaultYaw": 3.4053177965966315,
+      "defaultPitch": -0.12257188762864812
+    },
+    {
+      "id": "7-sanh7-dd3c",
+      "title": "Sảnh T7",
+      "panorama": "images/7-sanh7-dd3c_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-030e92",
+          "type": "Gallery",
+          "yaw": 5.680056673028646,
+          "pitch": -0.07097203934864971,
+          "title": "PHÒNG TUYỂN SINH VÀ TRUYỀN THÔNG\nBộ phận Truyền thông",
+          "description": "Phòng Truyền thông là đơn vị đầu mối quản trị thương hiệu, lên kế hoạch và phát triển hình ảnh của Nhà trường tới cộng đồng, đối tác và xã hội. Đơn vị phụ trách quản lý hệ thống các kênh thông tin chính thức, sáng tạo nội dung số, kết nối báo chí – truyền hình, đồng thời lan tỏa mạnh mẽ những giá trị học thuật, thành tựu đào tạo và nhịp sống sinh viên năng động, bản lĩnh của UEB.\nCác kênh truyền thông chính thức của Nhà trường: \nWebsite: https://ueb.edu.vn/  \nLinkedIn: https://www.linkedin.com/company/vnu-ueb/  \nTikTok: https://www.tiktok.com/@news.ueb.vnu  \nInstagram: https://www.instagram.com/news.ueb.vnu/ \nZaloOA: https://zalo.me/uebvnu\"\n",
+          "tooltipImage": "images/hs-030e92-img_muntctuj.png",
+          "gallery": [
+            "images/hs-030e92-g0_muntctuj.png",
+            "images/hs-030e92-g1_muntctuj.png"
+          ],
+          "icon": "camera"
+        },
+        {
+          "id": "hs-fb91d8",
+          "type": "Scene",
+          "yaw": 5.062102631327994,
+          "pitch": -0.027447814761866418,
+          "title": "THANG MÁY",
+          "target": "thangmay1-ed3e",
+          "tooltipImage": "images/hs-fb91d8-img_muntctuj.png",
+          "transition": "zoom-in",
+          "description": "Di chuyển đến được các tầng 1,4,5,6,7"
+        },
+        {
+          "id": "hs-e2100f",
+          "type": "Scene",
+          "yaw": 1.5978457298155986,
+          "pitch": -0.38755510666600657,
+          "title": "Cầu thang bộ T6-7",
+          "tooltipImage": "images/hs-e2100f-img_muntctuj.png",
+          "target": "6-cauthangbot6-bf60",
+          "transition": "zoom-in",
+          "description": "Lối xuống tầng 6",
+          "icon": "arrow"
+        },
+        {
+          "id": "hs-7ea6cb",
+          "type": "Scene",
+          "yaw": 2.256171619624619,
+          "pitch": -0.056395530089375034,
+          "title": "Cầu thang bộ  T7-8",
+          "tooltipImage": "images/hs-7ea6cb-img_muntctuj.png",
+          "description": "Lối lên Phòng Hội thảo quốc tế tầng 8",
+          "target": "8-cauthangbot8-e086",
+          "transition": "zoom-in",
+          "icon": "arrow_left"
+        },
+        {
+          "id": "hs-cc7fb6",
+          "type": "Scene",
+          "yaw": 0.7178511479710592,
+          "pitch": -0.07423273547323528,
+          "title": "Hành lang T7",
+          "description": "Lối dẫn đến Khoa Kinh tế Phát triển, Khoa Tài chính Ngân hàng, Khoa Kế toán - Kiểm toán, cùng Studio.",
+          "tooltipImage": "images/hs-cc7fb6-img_muntctuj.png",
+          "target": "7-hlt7-ktkt-77f6",
+          "transition": "zoom-in",
+          "icon": "arrow"
+        },
+        {
+          "id": "hs-922d21",
+          "type": "Website",
+          "yaw": 5.772492670589517,
+          "pitch": -0.07666175822518495,
+          "title": "Website",
+          "icon": "globe",
+          "target": "https://ueb.edu.vn/",
+          "tooltipImage": "images/hs-922d21-img_muntctuj.png",
+          "description": "Click để truy cập trang website của Trường Đại học Kinh tế - ĐHQGHN"
+        },
+        {
+          "id": "hs-a3a672",
+          "type": "Website",
+          "yaw": 5.684203063354911,
+          "pitch": -0.16536846426778617,
+          "title": "ZaloOA",
+          "icon": "link",
+          "description": "Click để truy cập trang ZaloOA của Trường Đại học Kinh tế - ĐHQGHN",
+          "tooltipImage": "images/hs-a3a672-img_muntctuj.png",
+          "target": "https://zalo.me/uebvnu"
+        },
+        {
+          "id": "hs-bf844f",
+          "type": "Website",
+          "yaw": 5.772403511644414,
+          "pitch": -0.15900187545576094,
+          "title": "LinkedIn",
+          "icon": "link",
+          "target": "https://www.linkedin.com/company/vnu-ueb/ ",
+          "websiteOpenMode": "tab",
+          "tooltipImage": "images/hs-bf844f-img_muntctuj.png",
+          "description": "Click để truy cập trang LinkedIn của Trường Đại học Kinh tế - ĐHQGHN"
+        },
+        {
+          "id": "hs-5a5f27",
+          "type": "Website",
+          "yaw": 5.682900152121325,
+          "pitch": -0.23696019150858438,
+          "title": "Tiktok",
+          "icon": "link",
+          "description": "Click để truy cập trang Tiktok của Trường Đại học Kinh tế - ĐHQGHN",
+          "tooltipImage": "images/hs-5a5f27-img_muntctuj.png",
+          "target": "https://www.tiktok.com/@news.ueb.vnu",
+          "websiteOpenMode": "tab"
+        },
+        {
+          "id": "hs-94afb9",
+          "type": "Website",
+          "yaw": 5.768234427209355,
+          "pitch": -0.24491577679818333,
+          "title": "Instagram",
+          "icon": "link",
+          "target": "https://www.instagram.com/news.ueb.vnu/",
+          "websiteOpenMode": "tab",
+          "tooltipImage": "images/hs-94afb9-img_muntctuj.png",
+          "description": "Click để truy cập trang Instagram của Trường Đại học Kinh tế - ĐHQGHN"
+        },
+        {
+          "id": "hs-7bcc7a",
+          "type": "Video",
+          "yaw": 5.724411527093617,
+          "pitch": 0.04367539166007672,
+          "title": "Video",
+          "icon": "video",
+          "target": "images/hs-7bcc7a-target_muntctuj.mp4",
+          "tooltipImage": "images/hs-7bcc7a-img_muntctuj.png",
+          "description": "Click để xem video."
+        }
+      ],
+      "defaultYaw": 0.11347358567615251,
+      "defaultPitch": 0.034927632292538036,
+      "mcVideo": "videos/7-sanh7-dd3c-mc_muntctuj.webm",
+      "mcVideoWidth": 450
+    },
+    {
+      "id": "7-hlt7-cuoi-e517",
+      "title": "Hành lang T7 - Cuối",
+      "panorama": "images/7-hlt7-cuoi-e517_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-0cbba6",
+          "type": "Scene",
+          "yaw": 4.862421762097266,
+          "pitch": -0.07052270521965265,
+          "title": "KHOA KẾ TOÁN - KIỂM TOÁN",
+          "tooltipImage": "images/hs-0cbba6-img_muntctuj.png",
+          "target": "7-ketoan1-7b0a",
+          "transition": "zoom-in",
+          "icon": "home",
+          "description": "Khoa Kế toán - Kiểm toán UEB là một trong những đơn vị chủ lực đưa lĩnh vực Kế toán & Tài chính (Accounting & Finance) của VNU-UEB bứt phá ấn tượng lọt Top 301–375 thế giới theo BXH QS Subject Rankings. \nKhoa đã và đang đem đến cho sinh viên môi trường giáo dục hiện đại, tạo điều kiện cho các em phát triển toàn diện, thực hiện đúng định hướng đào tạo theo chuẩn quốc tế."
+        },
+        {
+          "id": "hs-b2ff22",
+          "type": "Scene",
+          "yaw": 1.4363933321011428,
+          "pitch": 0.0037895467921975623,
+          "title": "LỐI LÊN STUDIO",
+          "tooltipImage": "images/hs-b2ff22-img_muntctuj.png",
+          "target": "7--loilenstudio-2b7a",
+          "transition": "zoom-in",
+          "icon": "arrow_left"
+        },
+        {
+          "id": "hs-b81493",
+          "type": "Scene",
+          "yaw": 3.036898382939817,
+          "pitch": -0.17987393124402673,
+          "title": "HÀNH LANG TẦNG 7",
+          "description": "Lối vào Khoa TCNH + KTPT",
+          "tooltipImage": "images/hs-b81493-img_muntctuj.png",
+          "target": "7-hlt7-ktpt-bd9b",
+          "transition": "zoom-in",
+          "icon": "arrow_up"
+        },
+        {
+          "id": "hs-9202fd",
+          "type": "Scene",
+          "yaw": 4.660382081214117,
+          "pitch": -0.0924167449410569,
+          "title": "HÀNH LANG TẦNG 7",
+          "icon": "arrow_up",
+          "tooltipImage": "images/hs-9202fd-img_muntctuj.png",
+          "target": "7-hlt7-ktkt-77f6",
+          "description": "Lối ra Phòng truyền thông và Sảnh tầng 7"
+        }
+      ],
+      "defaultYaw": 3.7709704037072154,
+      "defaultPitch": -0.19130204799011752
+    },
+    {
+      "id": "7-hlt7-ktkt-77f6",
+      "title": "Hành lang 7 - ktkt",
+      "panorama": "images/7-hlt7-ktkt-77f6_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-17196f",
+          "type": "Scene",
+          "yaw": 0.15957410059442864,
+          "pitch": -0.024596035835684704,
+          "title": "HÀNH LANG TẦNG 7",
+          "description": "Lối đi đến Khoa TCNH, KTPT, STUDIO",
+          "tooltipImage": "images/hs-17196f-img_muntctuj.png",
+          "target": "7-hlt7-cuoi-e517",
+          "icon": "arrow_up"
+        },
+        {
+          "id": "hs-528847",
+          "type": "Scene",
+          "yaw": 3.307799587529923,
+          "pitch": -0.05933940183953679,
+          "title": "SẢNH TẦNG 7",
+          "description": "Đây là nơi làm việc của 3 khoa bao gồm: Khoa Kinh tế Phát triển, Khoa Tài chính Ngân hàng, Khoa Kế toán - Kiểm toán, cùng Studio sản xuất hình ảnh và Phòng Truyền thông của Nhà trường.",
+          "tooltipImage": "images/hs-528847-img_muntctuj.png",
+          "target": "7-sanh7-dd3c",
+          "transition": "zoom-in"
+        },
+        {
+          "id": "hs-406675",
+          "type": "Scene",
+          "yaw": 6.008846237396114,
+          "pitch": -0.014217124158776517,
+          "title": "KHOA KẾ TOÁN - KIỂM TOÁN",
+          "description": "Khoa Kế toán - Kiểm toán UEB là một trong những đơn vị chủ lực đưa lĩnh vực Kế toán & Tài chính (Accounting & Finance) của VNU-UEB bứt phá ấn tượng lọt Top 301–375 thế giới theo BXH QS Subject Rankings. \nKhoa đã và đang đem đến cho sinh viên môi trường giáo dục hiện đại, tạo điều kiện cho các em phát triển toàn diện, thực hiện đúng định hướng đào tạo theo chuẩn quốc tế.",
+          "tooltipImage": "images/hs-406675-img_muntctuj.png",
+          "target": "7-ketoan1-7b0a",
+          "transition": "zoom-in",
+          "icon": "home"
+        }
+      ],
+      "defaultYaw": 0.4110820542252824,
+      "defaultPitch": -0.21056941147493236
+    },
+    {
+      "id": "7-ketoan1-7b0a",
+      "title": "Khoa Kế toán 1",
+      "panorama": "images/7-ketoan1-7b0a_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-f6e276",
+          "type": "Scene",
+          "yaw": 3.2196460737125285,
+          "pitch": -0.19230978955434996,
+          "title": "HÀNH LANG TẦNG 7",
+          "tooltipImage": "images/hs-f6e276-img_muntctuj.png",
+          "target": "7-hlt7-ktkt-77f6",
+          "transition": "zoom-in",
+          "description": "Lối đi đến Khoa TCNH, KTPT, STUDIO, Phòng truyền thông",
+          "icon": "arrow_left"
+        },
+        {
+          "id": "hs-317453",
+          "type": "Scene",
+          "yaw": 4.4089593463109935,
+          "pitch": -0.04977888564902044,
+          "title": "KHOA KẾ TOÁN - KIỂM TOÁN\nVăn phòng",
+          "icon": "home",
+          "description": "Khoa Kế toán - Kiểm toán UEB là một trong những đơn vị chủ lực đưa lĩnh vực Kế toán & Tài chính (Accounting & Finance) của VNU-UEB bứt phá ấn tượng lọt Top 301–375 thế giới theo BXH QS Subject Rankings. \nKhoa đã và đang đem đến cho sinh viên môi trường giáo dục hiện đại, tạo điều kiện cho các em phát triển toàn diện, thực hiện đúng định hướng đào tạo theo chuẩn quốc tế.\n",
+          "tooltipImage": "images/hs-317453-img_muntctuj.png",
+          "target": "7-ketoan2-17f7",
+          "transition": "zoom-in"
+        },
+        {
+          "id": "hs-328984",
+          "type": "Gallery",
+          "yaw": 4.412575956703974,
+          "pitch": -0.13002901743128414,
+          "title": "Thư viện Ảnh",
+          "icon": "camera",
+          "tooltipImage": "images/hs-328984-img_muntctuj.png",
+          "gallery": [
+            "images/hs-328984-g0_muntctuj.jpg",
+            "images/hs-328984-g1_muntctuj.jpg"
+          ]
+        },
+        {
+          "id": "hs-2e1b61",
+          "type": "Website",
+          "yaw": 4.416125490105795,
+          "pitch": -0.202497562648015,
+          "title": "Website",
+          "icon": "globe",
+          "target": "https://ueb.edu.vn/Don-Vi-Giang-Vien/UEB/don-vi-dao-tao/1873/1929",
+          "tooltipImage": "images/hs-2e1b61-img_muntctuj.png",
+          "description": "Click để truy cập trang website của khoa Kế toán - Kiểm toán"
+        }
+      ],
+      "defaultYaw": 4.9249182595535475,
+      "defaultPitch": 0.05782450508444725
+    },
+    {
+      "id": "7-ketoan2-17f7",
+      "title": "Khoa Kế toán 2",
+      "panorama": "images/7-ketoan2-17f7_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-ad9dcb",
+          "type": "Scene",
+          "yaw": 2.226059412632619,
+          "pitch": -0.102047681250089,
+          "title": "HÀNH LANG TẦNG 7",
+          "target": "7-hlt7-ktkt-77f6",
+          "transition": "zoom-in",
+          "description": "Lối đi đến Khoa TCNH, KTPT, STUDIO, Phòng truyền thông",
+          "tooltipImage": "images/hs-ad9dcb-img_muntctuj.png",
+          "icon": "arrow"
+        },
+        {
+          "id": "hs-110986",
+          "type": "Scene",
+          "yaw": 1.8137936826550376,
+          "pitch": 0.000645953823119827,
+          "title": "KHOA KẾ TOÁN - KIỂM TOÁN\nKhu vực làm việc Giảng viên",
+          "icon": "user",
+          "description": "Khoa Kế toán - Kiểm toán UEB là một trong những đơn vị chủ lực đưa lĩnh vực Kế toán & Tài chính (Accounting & Finance) của VNU-UEB bứt phá ấn tượng lọt Top 301–375 thế giới theo BXH QS Subject Rankings. \nKhoa đã và đang đem đến cho sinh viên môi trường giáo dục hiện đại, tạo điều kiện cho các em phát triển toàn diện, thực hiện đúng định hướng đào tạo theo chuẩn quốc tế.",
+          "tooltipImage": "images/hs-110986-img_muntctuj.png",
+          "target": "7-ketoan1-7b0a",
+          "transition": "zoom-in"
+        },
+        {
+          "id": "hs-cf1a44",
+          "type": "Gallery",
+          "yaw": 3.6286000017090903,
+          "pitch": 0.16425256949839895,
+          "title": "Ảnh",
+          "icon": "camera",
+          "tooltipImage": "images/hs-cf1a44-img_muntctuj.png",
+          "gallery": [
+            "images/hs-cf1a44-g0_muntctuj.jpg",
+            "images/hs-cf1a44-g1_muntctuj.jpg"
+          ]
+        },
+        {
+          "id": "hs-a5ec6c",
+          "type": "Website",
+          "yaw": 3.6301594974618667,
+          "pitch": 0.06157661223019151,
+          "title": "Website",
+          "icon": "globe",
+          "description": "Click để truy cập trang website của khoa Kế toán - Kiểm toán",
+          "target": "https://ueb.edu.vn/Don-Vi-Giang-Vien/UEB/don-vi-dao-tao/1873/1929",
+          "tooltipImage": "images/hs-a5ec6c-img_muntctuj.png"
+        }
+      ],
+      "defaultYaw": 3.41699024033167,
+      "defaultPitch": -0.0021363931519959856
+    },
+    {
+      "id": "7-tcnh-dbcf",
+      "title": "Khoa TCNH1",
+      "panorama": "images/7-tcnh-dbcf_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-8cd1f6",
+          "type": "Scene",
+          "yaw": 4.644359361780506,
+          "pitch": -0.04054963040849291,
+          "title": "Hành lang T7_2",
+          "tooltipImage": "images/hs-8cd1f6-img_muntctuj.png",
+          "target": "7-hlt7-ktpt-bd9b",
+          "transition": "zoom-in",
+          "icon": "arrow",
+          "description": "Lối ra Hành lang tầng 7 đi các khoa Kinh tế Phát triển, Kế toán Kiểm toán, Phòng truyền thông, Studio"
+        },
+        {
+          "id": "hs-29ff61",
+          "type": "Gallery",
+          "yaw": 3.356680129173507,
+          "pitch": 0.10713433283714235,
+          "title": "Thư viện ảnh",
+          "icon": "camera",
+          "gallery": [
+            "images/hs-29ff61-g0_muntctuj.jpg",
+            "images/hs-29ff61-g1_muntctuj.jpg"
+          ],
+          "tooltipImage": "images/hs-29ff61-img_muntctuj.png"
+        },
+        {
+          "id": "hs-c94240",
+          "type": "Website",
+          "yaw": 3.3572869915645933,
+          "pitch": 0.009385230003237766,
+          "title": "Website",
+          "icon": "globe",
+          "tooltipImage": "images/hs-c94240-img_muntctuj.png",
+          "target": "https://ueb.edu.vn/Don-Vi-Giang-Vien/UEB/don-vi-dao-tao/1873/1928",
+          "description": "Click để truy cập trang website của khoa Tài chính Ngân hàng"
+        }
+      ],
+      "defaultYaw": 2.716029974804513,
+      "defaultPitch": -0.1500762864430576
+    },
+    {
+      "id": "7-hlt7-ktpt-bd9b",
+      "title": "Hành lang T7_2",
+      "panorama": "images/7-hlt7-ktpt-bd9b_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-35a6eb",
+          "type": "Scene",
+          "yaw": 1.6019590686712275,
+          "pitch": -0.05326545924318693,
+          "title": "KHOA TÀI CHÍNH NGÂN HÀNG",
+          "tooltipImage": "images/hs-35a6eb-img_muntctuj.png",
+          "target": "7-tcnh-dbcf",
+          "icon": "home",
+          "description": "Khoa Tài chính Ngân hàng UEB là một trong những đơn vị chủ lực đưa lĩnh vực Kế toán & Tài chính (Accounting & Finance) của VNU-UEB bứt phá ấn tượng lọt Top 301–375 thế giới theo BXH QS Subject Rankings. Chương trình cử nhân của Khoa đạt kiểm định chất lượng giáo dục quốc tế ACBSP (Hoa Kỳ). Ngoài ra, Khoa quy tụ nhiều giảng viên có khả năng giảng dạy hoàn toàn bằng tiếng Anh và tốt nghiệp từ các trường đại học hàng đầu thế giới, mang đến hệ sinh thái học tập tài chính số (Fintech) và cơ hội học bổng, thực tập trực tiếp tại các ngân hàng, định chế tài chính lớn.",
+          "transition": "zoom-in"
+        },
+        {
+          "id": "hs-17ead0",
+          "type": "Scene",
+          "yaw": 4.2863349458187034,
+          "pitch": -0.06349846807269488,
+          "title": "KHOA KINH TẾ PHÁT TRIỂN ",
+          "transition": "zoom-in",
+          "target": "7-ktpt1-9234",
+          "tooltipImage": "images/hs-17ead0-img_muntctuj.png",
+          "icon": "home",
+          "description": "Khoa Kinh tế Phát triển là đơn vị tiên phong đào tạo liên ngành với 5 chuyên ngành mũi nhọn cập nhật theo chuẩn Đại học Sussex (Anh Quốc), đẩy mạnh ứng dụng AI và phân tích dữ liệu kinh tế. Khoa nổi bật với sinh viên năng động, không chỉ có thành tích học tập xuất sắc mà còn tham gia nhiều cuộc thi nghệ thuật đạt thành tích vượt trội như: Quán quân Vietnam's Next Top Model 2025 - sinh viên Lại Mai Hoa, Á hậu 1 Cuộc thi Hoa hậu Sinh viên Hòa bình Việt Nam 2025 - sinh viên Nguyễn Ngọc Anh."
+        },
+        {
+          "id": "hs-81f713",
+          "type": "Scene",
+          "yaw": 1.332383965611984,
+          "pitch": -0.07208384249783606,
+          "title": "HÀNH LANG TẦNG 7",
+          "tooltipImage": "images/hs-81f713-img_muntctuj.png",
+          "target": "7-hlt7-cuoi-e517",
+          "transition": "zoom-in",
+          "description": "Lối ra Sảnh tầng 7, khoa Kế toán - Kiểm toán, Phòng truyền thông và Studio",
+          "icon": "arrow_left"
+        }
+      ],
+      "defaultYaw": 0.752322284231694,
+      "defaultPitch": 0.12363160763804082
+    },
+    {
+      "id": "7-ktpt1-9234",
+      "title": "Khoa KTPT1",
+      "panorama": "images/7-ktpt1-9234_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-63d3a5",
+          "type": "Scene",
+          "yaw": 3.8305083331217595,
+          "pitch": -0.021115387481362324,
+          "title": "KHOA KINH TẾ PHÁT TRIỂN\nKhu vực làm việc của Giảng viên",
+          "tooltipImage": "images/hs-63d3a5-img_muntctuj.png",
+          "description": "Khoa Kinh tế Phát triển là đơn vị tiên phong đào tạo liên ngành với 5 chuyên ngành mũi nhọn cập nhật theo chuẩn Đại học Sussex (Anh Quốc), đẩy mạnh ứng dụng AI và phân tích dữ liệu kinh tế. Khoa nổi bật với sinh viên năng động, không chỉ có thành tích học tập xuất sắc mà còn tham gia nhiều cuộc thi nghệ thuật đạt thành tích vượt trội như: Quán quân Vietnam's Next Top Model 2025 - sinh viên Lại Mai Hoa, Á hậu 1 Cuộc thi Hoa hậu Sinh viên Hòa bình Việt Nam 2025 - sinh viên Nguyễn Ngọc Anh.",
+          "target": "7-ktpt2-12d8",
+          "transition": "zoom-in",
+          "icon": "user"
+        },
+        {
+          "id": "hs-d2fa34",
+          "type": "Scene",
+          "yaw": 2.304260694643342,
+          "pitch": -0.04965669729503808,
+          "title": "HÀNH LANG TẦNG 7",
+          "icon": "arrow_up",
+          "description": "Lối ra Hành lang tầng 7 đi các khoa Tài chính Ngân hàng, Kế toán Kiểm toán, Phòng truyền thông, Studio.",
+          "tooltipImage": "images/hs-d2fa34-img_muntctuj.png",
+          "target": "7-hlt7-ktpt-bd9b"
+        },
+        {
+          "id": "hs-cae65e",
+          "type": "Gallery",
+          "yaw": 3.087974217757265,
+          "pitch": -0.0407541317337774,
+          "title": "Thư viện ảnh",
+          "icon": "camera",
+          "tooltipImage": "images/hs-cae65e-img_muntctuj.png",
+          "gallery": [
+            "images/hs-cae65e-g0_muntctuj.png",
+            "images/hs-cae65e-g1_muntctuj.jpg"
+          ]
+        }
+      ],
+      "defaultYaw": 5.01584555506795,
+      "defaultPitch": -0.047295762931516716
+    },
+    {
+      "id": "7-ktpt2-12d8",
+      "title": "Khoa KTPT2",
+      "panorama": "images/7-ktpt2-12d8_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-dae8b6",
+          "type": "Scene",
+          "yaw": 1.769045362127795,
+          "pitch": -0.017444767016600027,
+          "title": "KHOA KINH TẾ PHÁT TRIỂN\nVăn Phòng",
+          "description": "Khoa Kinh tế Phát triển là đơn vị tiên phong đào tạo liên ngành với 5 chuyên ngành mũi nhọn cập nhật theo chuẩn Đại học Sussex (Anh Quốc), đẩy mạnh ứng dụng AI và phân tích dữ liệu kinh tế. Khoa nổi bật với sinh viên năng động, không chỉ có thành tích học tập xuất sắc mà còn tham gia nhiều cuộc thi nghệ thuật đạt thành tích vượt trội như: Quán quân Vietnam's Next Top Model 2025 - sinh viên Lại Mai Hoa, Á hậu 1 Cuộc thi Hoa hậu Sinh viên Hòa bình Việt Nam 2025 - sinh viên Nguyễn Ngọc Anh.",
+          "tooltipImage": "images/hs-dae8b6-img_muntctuj.png",
+          "target": "7-ktpt1-9234",
+          "transition": "zoom-in",
+          "icon": "home"
+        },
+        {
+          "id": "hs-8ece42",
+          "type": "Gallery",
+          "yaw": 4.126136344081516,
+          "pitch": 0.1641500518004413,
+          "title": "Thư viện Ảnh",
+          "icon": "camera",
+          "tooltipImage": "images/hs-8ece42-img_muntctuj.png",
+          "gallery": [
+            "images/hs-8ece42-g0_muntctuj.png",
+            "images/hs-8ece42-g1_muntctuj.jpg"
+          ]
+        },
+        {
+          "id": "hs-c2b3a4",
+          "type": "Website",
+          "yaw": 4.128726229179368,
+          "pitch": 0.0718739469415337,
+          "title": "Website",
+          "icon": "globe",
+          "target": "https://ueb.edu.vn/Don-Vi-Giang-Vien/UEB/don-vi-dao-tao/1873/1931",
+          "description": "Click để truy cập trang website của  khoa Kinh tế Phát triển",
+          "tooltipImage": "images/hs-c2b3a4-img_muntctuj.png"
+        }
+      ],
+      "defaultYaw": 3.1277935468960982,
+      "defaultPitch": -0.15315724057621116
+    },
+    {
+      "id": "8-cauthangbot8-e086",
+      "title": "Cầu thang bộ T7-8",
+      "panorama": "images/8-cauthangbot8-e086_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-4266e9",
+          "type": "Scene",
+          "yaw": 0.7492939887402927,
+          "pitch": 0.1984226140990788,
+          "title": "SẢNH UEB SHOP\nTẦNG 8",
+          "description": "Sảnh UEB Shop là không gian trưng bày và cung cấp các sản phẩm nhận diện thương hiệu độc quyền của Nhà trường. Tại đây, sinh viên và khách tham quan có thể tìm thấy đa dạng các vật phẩm lưu niệm mang đậm phong cách UEB như: quần áo, mũ, túi tote, dây đeo thẻ, bình nước giữ nhiệt, ô cùng nhiều ấn phẩm kỷ niệm ý nghĩa khác.\nĐặt hàng ngay tại Website UEB SHOP: https://uebshop.ueb.edu.vn/",
+          "tooltipImage": "images/hs-4266e9-img_muntctuj.png",
+          "target": "8-uebshop-481e",
+          "transition": "zoom-in"
+        },
+        {
+          "id": "hs-5b0c03",
+          "type": "Scene",
+          "yaw": 0.358855957090512,
+          "pitch": -0.42701291743342873,
+          "title": "SẢNH TẦNG 7",
+          "tooltipImage": "images/hs-5b0c03-img_muntctuj.png",
+          "transition": "zoom-in",
+          "target": "7-sanh7-dd3c",
+          "description": "Đây là nơi làm việc của 3 khoa bao gồm: Khoa Kinh tế Phát triển, Khoa Tài chính Ngân hàng, Khoa Kế toán - Kiểm toán, cùng Studio sản xuất hình ảnh và Phòng Truyền thông của Nhà trường."
+        }
+      ],
+      "defaultYaw": 0.614735530020752,
+      "defaultPitch": -0.1569283421618115
+    },
+    {
+      "id": "8-uebshop-481e",
+      "title": "UEB Shop",
+      "panorama": "images/8-uebshop-481e_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-4e3c54",
+          "type": "Scene",
+          "yaw": 4.336393580686906,
+          "pitch": -0.09240277849644651,
+          "title": "PHÒNG HỘI THẢO\n802",
+          "tooltipImage": "images/hs-4e3c54-img_muntctuj.png",
+          "target": "8-802-c9c8",
+          "transition": "zoom-in",
+          "icon": "home",
+          "description": "Phòng Hội thảo Tầng 8 được thiết kế hiện đại, trang bị đầy đủ hệ thống âm thanh, ánh sáng và màn hình trình chiếu chất lượng cao. Đây là không gian chuyên dụng phục vụ các buổi hội thảo khoa học, tọa đàm học thuật trong nước và quốc tế, cũng như các sự kiện chuyên môn quan trọng của Nhà trường."
+        },
+        {
+          "id": "hs-2139ba",
+          "type": "Scene",
+          "yaw": 6.215849792356809,
+          "pitch": -0.3516905966446753,
+          "title": "Cầu thang bộ T7-8",
+          "tooltipImage": "images/hs-2139ba-img_muntctuj.png",
+          "target": "8-cauthangbot8-e086",
+          "transition": "zoom-in",
+          "description": "Lối xuống tầng 7",
+          "icon": "arrow"
+        },
+        {
+          "id": "hs-19ee25",
+          "type": "Gallery",
+          "yaw": 1.7235302527021317,
+          "pitch": 0.17109047687891832,
+          "title": "Thư viện Ảnh",
+          "icon": "camera",
+          "tooltipImage": "images/hs-19ee25-img_muntctuj.png",
+          "gallery": [
+            "images/hs-19ee25-g0_muntctuj.jpg",
+            "images/hs-19ee25-g1_muntctuj.jpg",
+            "images/hs-19ee25-g2_muntctuj.jpg",
+            "images/hs-19ee25-g3_muntctuj.jpg"
+          ]
+        },
+        {
+          "id": "hs-2a6008",
+          "type": "Website",
+          "yaw": 1.7272357337648818,
+          "pitch": 0.31877299208184806,
+          "title": "Website",
+          "icon": "globe",
+          "target": "https://uebshop.ueb.edu.vn/",
+          "tooltipImage": "images/hs-2a6008-img_muntctuj.png",
+          "description": "Đặt hàng ngay tại Website UEB SHOP"
+        }
+      ],
+      "defaultYaw": 2.0235281147117212,
+      "defaultPitch": -0.04240105942032013,
+      "mcVideo": "videos/8-uebshop-481e-mc_muntctuj.webm",
+      "mcVideoWidth": 450
+    },
+    {
+      "id": "8-802-ceb0",
+      "title": "801",
+      "panorama": "images/8-802-ceb0_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-1da8a2",
+          "type": "Scene",
+          "yaw": 3.1692906125792923,
+          "pitch": -0.05545127979883668,
+          "title": "PHÒNG HỘI THẢO\n801",
+          "tooltipImage": "images/hs-1da8a2-img_muntctuj.png",
+          "target": "8-801-8194",
+          "transition": "zoom-in",
+          "icon": "home",
+          "description": "Phòng Hội thảo Tầng 8 được thiết kế hiện đại, trang bị đầy đủ hệ thống âm thanh, ánh sáng và màn hình trình chiếu chất lượng cao. Đây là không gian chuyên dụng phục vụ các buổi hội thảo khoa học, tọa đàm học thuật trong nước và quốc tế, cũng như các sự kiện chuyên môn quan trọng của Nhà trường."
+        },
+        {
+          "id": "hs-ec413b",
+          "type": "Scene",
+          "yaw": 5.149558926428988,
+          "pitch": -0.07587174232888128,
+          "title": "PHÒNG HỘI THẢO \n802",
+          "icon": "home",
+          "tooltipImage": "images/hs-ec413b-img_muntctuj.png",
+          "target": "8-802-c9c8",
+          "transition": "zoom-in",
+          "description": "Phòng Hội thảo Tầng 8 được thiết kế hiện đại, trang bị đầy đủ hệ thống âm thanh, ánh sáng và màn hình trình chiếu chất lượng cao. Đây là không gian chuyên dụng phục vụ các buổi hội thảo khoa học, tọa đàm học thuật trong nước và quốc tế, cũng như các sự kiện chuyên môn quan trọng của Nhà trường."
+        },
+        {
+          "id": "hs-65973a",
+          "type": "Gallery",
+          "yaw": 3.0621538938684565,
+          "pitch": -0.0581723603410611,
+          "title": "Thư viện Ảnh",
+          "icon": "camera",
+          "tooltipImage": "images/hs-65973a-img_muntctuj.png",
+          "transition": "zoom-in",
+          "gallery": [
+            "images/hs-65973a-g0_muntctuj.jpg",
+            "images/hs-65973a-g1_muntctuj.jpg",
+            "images/hs-65973a-g2_muntctuj.jpg",
+            "images/hs-65973a-g3_muntctuj.jpg",
+            "images/hs-65973a-g4_muntctuj.jpg",
+            "images/hs-65973a-g5_muntctuj.jpg",
+            "images/hs-65973a-g6_muntctuj.jpg",
+            "images/hs-65973a-g7_muntctuj.jpg",
+            "images/hs-65973a-g8_muntctuj.jpg",
+            "images/hs-65973a-g9_muntctuj.jpg",
+            "images/hs-65973a-g10_muntctuj.jpg",
+            "images/hs-65973a-g11_muntctuj.jpg"
+          ]
+        }
+      ],
+      "defaultYaw": 3.1392798614553823,
+      "defaultPitch": -0.18599490586903977
+    },
+    {
+      "id": "8-801-8194",
+      "title": "801-2",
+      "panorama": "images/8-801-8194_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-0db260",
+          "type": "Scene",
+          "yaw": 0.011417562681241313,
+          "pitch": 0.0038205816328047426,
+          "title": "PHÒNG HỘI THẢO QUỐC TẾ\n801",
+          "icon": "home",
+          "description": "Phòng Hội thảo Tầng 8 được thiết kế hiện đại, trang bị đầy đủ hệ thống âm thanh, ánh sáng và màn hình trình chiếu chất lượng cao. Đây là không gian chuyên dụng phục vụ các buổi hội thảo khoa học, tọa đàm học thuật trong nước và quốc tế, cũng như các sự kiện chuyên môn quan trọng của Nhà trường.\n",
+          "target": "8-802-ceb0",
+          "transition": "zoom-in",
+          "tooltipImage": "images/hs-0db260-img_muntctuj.png"
+        },
+        {
+          "id": "hs-f0caa9",
+          "type": "Gallery",
+          "yaw": 3.127530845937047,
+          "pitch": -0.40914473532086926,
+          "title": "Thư viện Ảnh",
+          "tooltipImage": "images/hs-f0caa9-img_muntctuj.png",
+          "gallery": [
+            "images/hs-f0caa9-g0_muntctuj.jpg",
+            "images/hs-f0caa9-g1_muntctuj.jpg",
+            "images/hs-f0caa9-g2_muntctuj.jpg",
+            "images/hs-f0caa9-g3_muntctuj.jpg",
+            "images/hs-f0caa9-g4_muntctuj.jpg",
+            "images/hs-f0caa9-g5_muntctuj.jpg",
+            "images/hs-f0caa9-g6_muntctuj.jpg",
+            "images/hs-f0caa9-g7_muntctuj.jpg",
+            "images/hs-f0caa9-g8_muntctuj.jpg",
+            "images/hs-f0caa9-g9_muntctuj.jpg"
+          ],
+          "icon": "camera"
+        },
+        {
+          "id": "hs-a6a01d",
+          "type": "Gallery",
+          "yaw": 6.191553276283667,
+          "pitch": 0.0002653217735790747,
+          "title": "Thư viện Ảnh",
+          "icon": "camera",
+          "tooltipImage": "images/hs-a6a01d-img_muntctuj.png",
+          "gallery": [
+            "images/hs-a6a01d-g0_muntctuj.jpg",
+            "images/hs-a6a01d-g1_muntctuj.jpg",
+            "images/hs-a6a01d-g2_muntctuj.jpg",
+            "images/hs-a6a01d-g3_muntctuj.jpg",
+            "images/hs-a6a01d-g4_muntctuj.jpg",
+            "images/hs-a6a01d-g5_muntctuj.jpg",
+            "images/hs-a6a01d-g6_muntctuj.jpg",
+            "images/hs-a6a01d-g7_muntctuj.jpg",
+            "images/hs-a6a01d-g8_muntctuj.jpg",
+            "images/hs-a6a01d-g9_muntctuj.jpg",
+            "images/hs-a6a01d-g10_muntctuj.jpg"
+          ]
+        }
+      ],
+      "defaultYaw": 6.238376155621221,
+      "defaultPitch": -0.10716072690294132
+    },
+    {
+      "id": "t7-3b31",
+      "title": "Studio",
+      "panorama": "images/t7-3b31_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-7e9296",
+          "type": "Scene",
+          "yaw": 3.902131456865784,
+          "pitch": -0.1600652237652378,
+          "title": "LỐI XUỐNG HÀNH LANG TẦNG 7",
+          "icon": "arrow",
+          "target": "7--loilenstudio-2b7a",
+          "tooltipImage": "images/hs-7e9296-img_muntctuj.png",
+          "transition": "zoom-in"
+        }
+      ],
+      "defaultYaw": 6.029570693005563,
+      "defaultPitch": -0.07837194469303777
+    },
+    {
+      "id": "t7-4bbb",
+      "title": "Phòng học T5-1",
+      "panorama": "images/t7-4bbb_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-be55b4",
+          "type": "Scene",
+          "yaw": 0.7751500411715236,
+          "pitch": -0.0072843350058036105,
+          "title": "KHÔNG GIAN SÁNG TẠO\nView 1",
+          "tooltipImage": "images/hs-be55b4-img_muntctuj.png",
+          "target": "5-khonggianst1-ae0a",
+          "transition": "zoom-in",
+          "description": "Không gian sáng tạo UEB\nKhông chỉ là nơi khơi nguồn cảm hứng, Không gian sáng tạo còn trở thành điểm check-in “huyền thoại” của UEBers và các đối tác khi ghé thăm UEB.\nMang đậm vibe hoàng gia sang trọng và tinh tế, không gian gây ấn tượng bởi sự chỉn chu trong từng chi tiết – từ chiếc đàn piano, những bức tranh nghệ thuật đến hệ thống đèn được bố trí hài hòa. Tất cả cùng tạo nên một tổng thể đẹp mắt, ấn tượng và đầy cảm hứng, nơi mỗi góc nhỏ đều có thể trở thành một khung hình đáng nhớ.",
+          "icon": "map"
+        }
+      ],
+      "defaultYaw": 3.0881866265835054,
+      "defaultPitch": -0.2811278322223978
+    },
+    {
+      "id": "t7-3569",
+      "title": "Phòng học T5-2",
+      "panorama": "images/t7-3569_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-dbe106",
+          "type": "Scene",
+          "yaw": 5.082856313513083,
+          "pitch": -0.07299541868631088,
+          "title": "KHÔNG GIAN SÁNG TẠO\nView 2",
+          "description": "Không gian sáng tạo UEB\nKhông chỉ là nơi khơi nguồn cảm hứng, Không gian sáng tạo còn trở thành điểm check-in “huyền thoại” của UEBers và các đối tác khi ghé thăm UEB.\nMang đậm vibe hoàng gia sang trọng và tinh tế, không gian gây ấn tượng bởi sự chỉn chu trong từng chi tiết – từ chiếc đàn piano, những bức tranh nghệ thuật đến hệ thống đèn được bố trí hài hòa. Tất cả cùng tạo nên một tổng thể đẹp mắt, ấn tượng và đầy cảm hứng, nơi mỗi góc nhỏ đều có thể trở thành một khung hình đáng nhớ.",
+          "target": "5-khonggianst2-9b87",
+          "transition": "zoom-in",
+          "tooltipImage": "images/hs-dbe106-img_muntctuj.png",
+          "icon": "map"
+        }
+      ],
+      "defaultYaw": 6.088841876287322,
+      "defaultPitch": -0.16713288089811584
+    },
+    {
+      "id": "t7-997e",
+      "title": "Đại lộ Hoàng Gia",
+      "panorama": "images/t7-997e_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-614704",
+          "type": "Scene",
+          "yaw": 6.107320090164384,
+          "pitch": -0.1223025211281914,
+          "title": "ĐẠI LỘ HOÀNG GIA",
+          "tooltipImage": "images/hs-614704-img_muntctuj.png",
+          "target": "dailo-f4c0",
+          "transition": "zoom-in",
+          "description": "Lối vào"
+        },
+        {
+          "id": "hs-93f561",
+          "type": "Scene",
+          "yaw": 3.2802100612589684,
+          "pitch": -0.0970518104598177,
+          "title": "VIỆN ĐÀO TẠO QUỐC TẾ\n",
+          "tooltipImage": "images/hs-93f561-img_muntctuj.png",
+          "target": "1-cuasite1-0d88",
+          "transition": "zoom-in",
+          "description": "Cửa 1"
+        }
+      ],
+      "defaultYaw": 6.1011002399303225,
+      "defaultPitch": 0.12323528200583711
+    },
+    {
+      "id": "thangmay1-ed3e",
+      "title": "Thang máy",
+      "panorama": "images/thangmay1-ed3e_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-1b59bd",
+          "type": "Scene",
+          "yaw": 3.6652917065589437,
+          "pitch": -0.13919911681134423,
+          "title": "SẢNH TẦNG 1\n",
+          "tooltipImage": "images/hs-1b59bd-img_muntctuj.png",
+          "target": "sanh1-97b6",
+          "transition": "zoom-in",
+          "description": "Tòa nhà E4 - UEB"
+        },
+        {
+          "id": "hs-28ce7b",
+          "type": "Scene",
+          "yaw": 3.500446703460024,
+          "pitch": -0.02150065595870765,
+          "title": "SẢNH TẦNG 6\n",
+          "tooltipImage": "images/hs-28ce7b-img_muntctuj.png",
+          "target": "6-sanht6-4242",
+          "transition": "zoom-in",
+          "description": "Tòa nhà E4 - UEB"
+        },
+        {
+          "id": "hs-5fe69d",
+          "type": "Scene",
+          "yaw": 3.661716125586542,
+          "pitch": -0.06280622575267847,
+          "title": "SẢNH TẦNG 5",
+          "description": "Tòa nhà E4 - UEB",
+          "tooltipImage": "images/hs-5fe69d-img_muntctuj.png",
+          "target": "5-sanht5-891a",
+          "transition": "zoom-in"
+        },
+        {
+          "id": "hs-5dcdef",
+          "type": "Scene",
+          "yaw": 3.5062165647721173,
+          "pitch": -0.09094559659934265,
+          "title": "SẢNH TẦNG 4\n",
+          "description": "Tòa nhà E4 - UEB",
+          "tooltipImage": "images/hs-5dcdef-img_muntctuj.png",
+          "target": "4-sanht4-876f",
+          "transition": "zoom-in"
+        },
+        {
+          "id": "hs-35b43a",
+          "type": "Scene",
+          "yaw": 3.6557553486942003,
+          "pitch": 0.0301294405471928,
+          "title": "SẢNH TẦNG 7\n",
+          "description": "Tòa nhà E4 - UEB",
+          "tooltipImage": "images/hs-35b43a-img_muntctuj.png",
+          "target": "7-sanh7-dd3c",
+          "transition": "zoom-in"
+        }
+      ],
+      "defaultYaw": 3.9677582616892226,
+      "defaultPitch": 0.26997107134474474
+    },
+    {
+      "id": "t7-f35e",
+      "title": "Phòng học máy tính T3",
+      "panorama": "images/t7-f35e_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-bf3ebd",
+          "type": "Scene",
+          "yaw": 4.906871927845976,
+          "pitch": -0.10067847465711433,
+          "title": "HÀNH LANG TẦNG 3\nTòa nhà E4 - UEB",
+          "tooltipImage": "images/hs-bf3ebd-img_muntctuj.png",
+          "target": "3-hl-t3-eaab",
+          "transition": "zoom-in",
+          "icon": "arrow_left",
+          "description": "Không gian chuyển tiếp tầng 3 kết nối các phòng thực hành chuyên dụng và Viện Quản trị Kinh doanh, được bố trí biển chỉ dẫn rõ ràng, tạo sự thuận tiện cho việc học tập và nghiên cứu."
+        }
+      ],
+      "defaultYaw": 3.174165580453905,
+      "defaultPitch": -0.6044163551946338
+    },
+    {
+      "id": "3-phonghoc2-9d33",
+      "title": "Phòng học Máy tính T3",
+      "panorama": "images/3-phonghoc2-9d33_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-46a588",
+          "type": "Scene",
+          "yaw": 1.8251320821960069,
+          "pitch": -0.13719325078997469,
+          "title": "HÀNH LANG TẦNG 3\nTòa nhà E4 - UEB",
+          "icon": "arrow_left",
+          "description": "Không gian chuyển tiếp tầng 3 kết nối các phòng thực hành chuyên dụng và Viện Quản trị Kinh doanh, được bố trí biển chỉ dẫn rõ ràng, tạo sự thuận tiện cho việc học tập và nghiên cứu.",
+          "tooltipImage": "images/hs-46a588-img_muntctuj.png",
+          "target": "3-hl-t3-eaab"
+        }
+      ],
+      "defaultYaw": 3.3075689244850075,
+      "defaultPitch": -0.2787268452983036
+    },
+    {
+      "id": "7--loilenstudio-2b7a",
+      "title": "7. loilenstudio",
+      "panorama": "images/7--loilenstudio-2b7a_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-b0b7bf",
+          "type": "Scene",
+          "yaw": 2.787491455867183,
+          "pitch": -0.03834110838556115,
+          "title": "STUDIO UEB",
+          "icon": "arrow_left",
+          "description": "Studio sản xuất hình ảnh chuyên nghiệp",
+          "tooltipImage": "images/hs-b0b7bf-img_muntctuj.png",
+          "target": "t7-3b31",
+          "transition": "zoom-in"
+        },
+        {
+          "id": "hs-684cd8",
+          "type": "Scene",
+          "yaw": 6.09424522573823,
+          "pitch": -0.028456787686333307,
+          "title": "HÀNH LANG TẦNG 7",
+          "icon": "arrow_left",
+          "description": "Lối ra Sảnh tầng 7 và các khoa Kinh tế Phát triển, Tài chính Ngân hàng, Kế toán Kiểm toán, Phòng truyền thông.",
+          "tooltipImage": "images/hs-684cd8-img_muntctuj.png",
+          "target": "7-hlt7-cuoi-e517",
+          "transition": "zoom-in"
+        }
+      ],
+      "defaultYaw": 2.4652342070730895,
+      "defaultPitch": -0.08112559091634974
+    },
+    {
+      "id": "8-802-c9c8",
+      "title": "8.802",
+      "panorama": "images/8-802-c9c8_muntctuj.jpg",
+      "hotspots": [
+        {
+          "id": "hs-0bb8cc",
+          "type": "Scene",
+          "yaw": 1.5617530999905338,
+          "pitch": -0.18159176724585158,
+          "title": "SẢNH UEB SHOP\nTẦNG 8",
+          "description": "Sảnh UEB Shop là không gian trưng bày và cung cấp các sản phẩm nhận diện thương hiệu độc quyền của Nhà trường. Tại đây, sinh viên và khách tham quan có thể tìm thấy đa dạng các vật phẩm lưu niệm mang đậm phong cách UEB như: quần áo, mũ, túi tote, dây đeo thẻ, bình nước giữ nhiệt, ô cùng nhiều ấn phẩm kỷ niệm ý nghĩa khác.\nĐặt hàng ngay tại Website UEB SHOP: https://uebshop.ueb.edu.vn/",
+          "tooltipImage": "images/hs-0bb8cc-img_muntctuj.png",
+          "transition": "zoom-in",
+          "target": "8-uebshop-481e",
+          "icon": "building"
+        },
+        {
+          "id": "hs-f7a488",
+          "type": "Scene",
+          "yaw": 1.0986380285779755,
+          "pitch": -0.15696426766767257,
+          "title": "PHÒNG HỘI THẢO\n801",
+          "icon": "home",
+          "description": "Phòng Hội thảo Tầng 8 được thiết kế hiện đại, trang bị đầy đủ hệ thống âm thanh, ánh sáng và màn hình trình chiếu chất lượng cao. Đây là không gian chuyên dụng phục vụ các buổi hội thảo khoa học, tọa đàm học thuật trong nước và quốc tế, cũng như các sự kiện chuyên môn quan trọng của Nhà trường.\n",
+          "tooltipImage": "images/hs-f7a488-img_muntctuj.png",
+          "target": "8-802-ceb0",
+          "transition": "zoom-in"
+        },
+        {
+          "id": "hs-6aabf8",
+          "type": "Gallery",
+          "yaw": 3.704445336875894,
+          "pitch": -0.10772958417007805,
+          "title": "Thư viện Ảnh",
+          "icon": "camera",
+          "tooltipImage": "images/hs-6aabf8-img_muntctuj.png",
+          "gallery": [
+            "images/hs-6aabf8-g0_muntctuj.jpg",
+            "images/hs-6aabf8-g1_muntctuj.jpg",
+            "images/hs-6aabf8-g2_muntctuj.jpg"
+          ]
+        }
+      ],
+      "defaultYaw": 3.679567359200153,
+      "defaultPitch": 0.0500895018483658
+    }
+  ],
+  "menu": [
+    {
+      "id": "a741d577-cb44-4df0-99c3-fc3928622f7a",
+      "title": "UEB - E4",
+      "children": [
+        {
+          "id": "cad0b5de-2b3f-4772-a197-9a256146e93d",
+          "title": "Tầng 1",
+          "children": [],
+          "targetSceneId": "01-1e4-55d4"
+        },
+        {
+          "id": "f14b7ca9-4107-4045-8a21-234905435740",
+          "title": "Tầng 2",
+          "children": [],
+          "targetSceneId": "2-sanht2-62ed"
+        },
+        {
+          "id": "a1333b6d-5b68-4732-bb82-08f613023484",
+          "title": "Tầng 3",
+          "children": [],
+          "targetSceneId": "3-sanht3-7ddd"
+        },
+        {
+          "id": "46fb3a4c-ae0c-4ae6-b450-0d549069a018",
+          "title": "Tầng 4",
+          "children": [],
+          "targetSceneId": "4-sanht4-876f"
+        },
+        {
+          "id": "b2c57d09-b279-4c64-a8a4-15d9824cac48",
+          "title": "Tầng 5",
+          "children": [],
+          "targetSceneId": "5-sanht5-891a"
+        },
+        {
+          "id": "2abba174-b2d8-48fc-83c7-b728bda8269f",
+          "title": "Tầng 6",
+          "children": [],
+          "targetSceneId": "6-sanht6-4242"
+        },
+        {
+          "id": "c0d6fde0-3178-42a9-bee8-402448d2db9e",
+          "title": "Tầng 7",
+          "children": [],
+          "targetSceneId": "7-sanh7-dd3c"
+        },
+        {
+          "id": "3e207ee0-bb77-437f-bf57-1d197fb361f0",
+          "title": "Tầng 8",
+          "children": [],
+          "targetSceneId": "8-uebshop-481e"
+        }
+      ]
+    }
+  ],
+  "bgmUrl": "audio\\nhac.mp3",
+  "hotspotOpacity": 0.5
+}

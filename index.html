@@ -1,0 +1,1006 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core@5/index.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/markers-plugin@5/index.min.css" />
+    <style>
+      html, body { margin: 0; padding: 0; width: 100vw; height: 100vh; overflow: hidden; background: #000; }
+      #viewer { width: 100%; height: 100%; }
+      .vt-overlay {
+        position: fixed; inset: 0; background: black; z-index: 9999;
+        opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
+      }
+      .vt-overlay.active { opacity: 1; }
+      
+      .popup-overlay {
+        position: fixed; inset: 0; z-index: 10000;
+        display: flex; align-items: center; justify-content: center;
+        opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+      }
+      .popup-overlay.active { opacity: 1; pointer-events: auto; }
+      .popup-container {
+        position: relative; max-width: 70vw; max-height: 66vh;
+        border: 3.5px solid #f59e0b; border-radius: 12px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.7), 0 0 20px rgba(245,158,11,0.3);
+        display: flex; flex-direction: column; overflow: hidden;
+        background: transparent;
+      }
+      .vt-hide-scrollbar::-webkit-scrollbar { display: none; }
+      .vt-custom-tooltip { max-width: none !important; background: rgba(3, 62, 61, 0.9) !important; backdrop-filter: blur(8px) !important; border: 1px solid rgba(255,255,255,0.1) !important; border-radius: 8px !important; box-shadow: 0 10px 25px rgba(0,0,0,0.5) !important; padding: 8px !important; }
+      .vt-custom-tooltip .psv-tooltip-content { padding: 0 !important; }
+
+      /* Mobile hotspot info bottom-sheet */
+      .vt-hs-info-overlay {
+        position: fixed; inset: 0; z-index: 10000;
+        display: none; align-items: flex-end; justify-content: center;
+        background: rgba(0,0,0,0.4); backdrop-filter: blur(4px);
+        transition: opacity 0.3s ease;
+      }
+      .vt-hs-info-overlay.active { display: flex; }
+      .vt-hs-info-card {
+        width: 100%; max-width: 420px;
+        background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(12px);
+        border-radius: 20px 20px 0 0; padding: 20px 20px calc(20px + env(safe-area-inset-bottom));
+        color: white; font-family: 'Roboto', sans-serif;
+        box-shadow: 0 -10px 40px rgba(0,0,0,0.5);
+        transform: translateY(100%); transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+        max-height: 70vh; overflow-y: auto;
+      }
+      .vt-hs-info-overlay.active .vt-hs-info-card { transform: translateY(0); }
+      .vt-hs-info-handle {
+        width: 40px; height: 4px; background: rgba(255,255,255,0.3);
+        border-radius: 2px; margin: 0 auto 16px; flex-shrink: 0;
+      }
+      .vt-hs-info-title {
+        font-size: 18px; font-weight: 700; margin-bottom: 8px;
+        display: flex; align-items: center; gap: 10px;
+      }
+      .vt-hs-info-title svg { flex-shrink: 0; }
+      .vt-hs-info-desc {
+        font-size: 14px; line-height: 1.5; opacity: 0.85; margin-bottom: 16px;
+        white-space: pre-wrap; word-wrap: break-word;
+      }
+      .vt-hs-info-img {
+        width: 100%; max-height: 40vh; object-fit: contain; border-radius: 12px; margin-bottom: 16px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      }
+      .vt-hs-info-go-btn {
+        width: 100%; padding: 14px; border-radius: 14px; border: none; cursor: pointer;
+        background: linear-gradient(135deg, #f59e0b, #d97706); color: white;
+        font-size: 16px; font-weight: 700; font-family: 'Roboto', sans-serif;
+        box-shadow: 0 6px 20px rgba(245,158,11,0.3);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .vt-hs-info-go-btn:active { transform: scale(0.97); box-shadow: 0 2px 8px rgba(245,158,11,0.2); }
+      .vt-hs-info-close {
+        width: 100%; padding: 12px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.2);
+        background: transparent; color: rgba(255,255,255,0.7); cursor: pointer;
+        font-size: 14px; font-family: 'Roboto', sans-serif; margin-top: 8px;
+      }
+      .vt-hs-info-close:active { background: rgba(255,255,255,0.05); }
+      .popup-close {
+        position: absolute; top: 10px; right: 10px; z-index: 30;
+        background: rgba(0,0,0,0.6); color: white; border: 1px solid rgba(255,255,255,0.3);
+        border-radius: 50%; width: 32px; height: 32px; font-size: 18px;
+        cursor: pointer; display: flex; align-items: center; justify-content: center;
+        transition: background 0.2s;
+      }
+      .popup-close:hover { background: #dc2626; }
+      .popup-content {
+        flex: 1; display: flex; align-items: center; justify-content: center; overflow: hidden;
+      }
+      .vt-menu-btn {
+        position: fixed; top: 20px; left: 20px; z-index: 10001; background: rgba(3, 62, 61, 0.8);
+        border-radius: 8px; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
+        cursor: pointer; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(8px);
+        transition: background 0.3s, transform 0.3s;
+      }
+      .vt-menu-btn:hover { background: rgba(3, 62, 61, 1); transform: scale(1.05); }
+      .vt-menu-btn svg { width: 24px; height: 24px; stroke: white; stroke-width: 2; stroke-linecap: round; }
+
+      .vt-home-btn {
+        position: fixed; top: 16px; right: 60px; z-index: 10001;
+        border-radius: 50%; width: 42px; height: 42px;
+        background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.2);
+        color: white; font-size: 18px; cursor: pointer;
+        backdrop-filter: blur(8px); box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        display: none; align-items: center; justify-content: center;
+        transition: transform 0.2s;
+      }
+      .vt-home-btn:hover { transform: scale(1.1); }
+      
+      .vt-menu-drawer {
+        position: fixed; top: 0; left: -320px; width: 300px; height: 100%; background: rgba(3, 62, 61, 0.95);
+        backdrop-filter: blur(12px); z-index: 10000; transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border-right: 1px solid rgba(255,255,255,0.1); color: white; display: flex; flex-direction: column;
+        box-shadow: 20px 0 50px rgba(0,0,0,0.5);
+      }
+      .vt-menu-drawer.active { left: 0; }
+      .vt-menu-header {
+        height: 84px; display: flex; align-items: flex-end; padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.1);
+        font-size: 18px; font-weight: bold; background: #930F1C;
+      }
+      .vt-menu-content { flex: 1; overflow-y: auto; padding: 12px 0; }
+      .vt-menu-item-row {
+        display: flex; align-items: center; padding: 10px 20px; cursor: pointer; transition: background 0.2s;
+        border-left: 3px solid transparent;
+      }
+      .vt-menu-item-row:hover { background: rgba(255,255,255,0.05); border-left-color: #930F1C; }
+      .vt-menu-item-label { flex: 1; font-size: 15px; }
+      .vt-menu-item-toggle {
+        width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;
+        transition: transform 0.3s; background: rgba(255,255,255,0.1); border-radius: 4px;
+      }
+      .vt-menu-item-toggle.open { transform: rotate(90deg); }
+      .vt-menu-children { display: none; background: rgba(0,0,0,0.15); }
+      .vt-menu-children.open { display: block; }
+    </style>
+  </head>
+  <body>
+    <div id="viewer"></div>
+    
+    <div id="vt-start-screen" style="position:fixed;inset:0;background:rgba(15,23,42,0.9);z-index:999999;display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;backdrop-filter:blur(8px);transition:opacity 0.5s ease;">
+      <h1 style="font-size:22px;margin-bottom:15px;font-family:'Roboto', sans-serif;font-weight:700;text-align:center;padding:0 20px;line-height:1.4;text-transform:uppercase;letter-spacing:1px;">Trải nghiệm Không gian 360°<br/><span style="font-size:36px;color:#f59e0b;font-weight:900;display:block;margin-top:12px;text-shadow:0px 4px 10px rgba(0,0,0,0.6);">Trường Đại học Kinh tế - ĐHQGHN</span></h1>
+      <p style="font-size:16px;color:#cbd5e1;margin-bottom:30px;font-family:'Roboto', sans-serif;text-align:center;">Bật âm thanh để có trải nghiệm tốt nhất</p>
+      <button id="vt-start-btn" style="padding:15px 40px;font-size:18px;background:linear-gradient(135deg, #f59e0b, #d97706);color:white;border:none;border-radius:30px;cursor:pointer;font-weight:bold;box-shadow:0 10px 25px rgba(245,158,11,0.3);transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">BẮT ĐẦU</button>
+    </div>
+
+    <!-- BGM Audio & Button -->
+    <audio id="vt-bgm" loop></audio>
+    <button id="vt-bgm-btn" style="display: none; position: fixed; top: 16px; right: 16px; z-index: 9999; width: 42px; height: 42px; border-radius: 50%; background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 18px; cursor: pointer; backdrop-filter: blur(8px); box-shadow: 0 4px 12px rgba(0,0,0,0.4); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" title="Bật/Tắt nhạc nền">
+      🎵
+    </button>
+
+    <div id="overlay" class="vt-overlay"></div>
+    
+    <div id="vt-menu-btn" class="vt-menu-btn" style="display: none;">
+      <svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </div>
+    <button id="vt-home-btn" class="vt-home-btn" title="Quay về trang chủ">🏠</button>
+    <div id="vt-menu-drawer" class="vt-menu-drawer">
+      <div class="vt-menu-header">Danh mục Tour</div>
+      <div id="vt-menu-content" class="vt-menu-content vt-hide-scrollbar"></div>
+    </div>
+
+    <div id="popup-overlay" class="popup-overlay">
+      <div class="popup-container">
+        <button id="popup-close" class="popup-close" title="Đóng">&times;</button>
+        <div id="popup-content" class="popup-content"></div>
+      </div>
+    </div>
+    
+    <div id="vt-lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.95); z-index:99999; align-items:center; justify-content:center; cursor:zoom-out;" onclick="this.style.display='none'">
+      <img id="vt-lightbox-img" style="max-width:95vw; max-height:95vh; object-fit:contain;" />
+    </div>
+
+    <!-- Mobile hotspot info bottom sheet -->
+    <div id="vt-hs-info" class="vt-hs-info-overlay">
+      <div class="vt-hs-info-card">
+        <div class="vt-hs-info-handle"></div>
+        <div class="vt-hs-info-title" id="vt-hs-info-title"></div>
+        <div class="vt-hs-info-desc" id="vt-hs-info-desc"></div>
+        <img id="vt-hs-info-img" class="vt-hs-info-img" style="display:none" />
+        <button class="vt-hs-info-go-btn" id="vt-hs-info-go">Đi tới →</button>
+        <button class="vt-hs-info-close" id="vt-hs-info-close">Đóng</button>
+      </div>
+    </div>
+
+    <!-- Error Catcher -->
+    <script>
+      window.addEventListener('error', function(e) {
+        document.body.innerHTML += '<div style="position:fixed;top:0;left:0;background:red;color:white;z-index:999999;padding:20px;font-size:16px;">JS ERROR: ' + e.message + '<br>' + e.filename + ':' + e.lineno + '</div>';
+      });
+      window.addEventListener('unhandledrejection', function(e) {
+        document.body.innerHTML += '<div style="position:fixed;top:50px;left:0;background:red;color:white;z-index:999999;padding:20px;font-size:16px;">PROMISE ERROR: ' + (e.reason && e.reason.message ? e.reason.message : e.reason) + '</div>';
+      });
+    </script>
+
+    <!-- Polyfill for importmap in older browsers -->
+    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+
+    <!-- Correct Importmap for PSV v5 -->
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.158.0/build/three.module.js",
+        "@photo-sphere-viewer/core": "https://unpkg.com/@photo-sphere-viewer/core@5.14.3/index.module.js",
+        "@photo-sphere-viewer/markers-plugin": "https://unpkg.com/@photo-sphere-viewer/markers-plugin@5.14.3/index.module.js"
+      }
+    }
+    </script>
+
+    <script type="module">
+      import { Viewer } from '@photo-sphere-viewer/core';
+      import { MarkersPlugin } from '@photo-sphere-viewer/markers-plugin';
+
+      // Icon SVG map – đồng bộ với PropertiesPanel.tsx
+      const ICON_SVG = {
+        phone:    '<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>',
+        mobile:   '<path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"/>',
+        mail:     '<path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>',
+        globe:    '<path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/>',
+        link:     '<path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"/>',
+        video:    '<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"/>',
+        play:     '<path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z"/>',
+        camera:   '<path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z"/><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z"/>',
+        image:    '<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.41a2.25 2.25 0 013.182 0l2.909 2.91m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>',
+        music:    '<path stroke-linecap="round" stroke-linejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z"/>',
+        document: '<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>',
+        arrow_up: '<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"/>',
+        location: '<path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>',
+        map:      '<path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c-.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"/>',
+        arrow:    '<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>',
+        arrow_left: '<path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/>',
+        star:     '<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/>',
+        arrow_down: '<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"/>',
+        wifi:     '<path stroke-linecap="round" stroke-linejoin="round" d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 011.06 0z"/>',
+        home:     '<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/>',
+        building: '<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/>',
+        user:     '<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>',
+        qr:       '<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5zM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0113.5 9.375v-4.5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 6.75h.75v.75h-.75v-.75zM6.75 16.5h.75v.75h-.75v-.75zM16.5 6.75h.75v.75h-.75v-.75zM13.5 13.5h.75v.75h-.75v-.75zM13.5 19.5h.75v.75h-.75v-.75zM19.5 13.5h.75v.75h-.75v-.75zM19.5 19.5h.75v.75h-.75v-.75zM16.5 16.5h.75v.75h-.75v-.75z"/>',
+      };
+
+      function buildMarkerHtml(iconKey, fillColor, opacity) {
+        const isPin = !iconKey || iconKey === 'pin';
+        if (isPin) {
+          return `<svg viewBox="0 0 24 24" fill="${fillColor}" stroke="white" stroke-width="1.5" style="width: 36px; height: 36px; cursor: pointer; opacity: ${opacity}; filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.5)); transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), opacity 0.25s cubic-bezier(0.4,0,0.2,1); transform-origin: bottom center;" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.3)'" onmouseout="this.style.opacity='${opacity}'; this.style.transform='scale(1)'">
+            <path d="M12 21.5C12 21.5 4 14 4 9.5C4 5.35786 7.58172 2 12 2C16.4183 2 20 5.35786 20 9.5C20 14 12 21.5 12 21.5Z" />
+            <circle cx="12" cy="9.5" r="3.5" fill="white" stroke="none" />
+          </svg>`;
+        }
+        const svgPath = ICON_SVG[iconKey] || '';
+        return `<div style="width: 40px; height: 40px; border-radius: 50%; background: ${fillColor}; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: ${opacity}; filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.55)); transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), opacity 0.25s cubic-bezier(0.4,0,0.2,1); transform-origin: center; box-shadow: 0 0 0 3px rgba(255,255,255,0.25);" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.25)'" onmouseout="this.style.opacity='${opacity}'; this.style.transform='scale(1)'">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" style="width: 22px; height: 22px;">${svgPath}</svg>
+        </div>`;
+      }
+
+      (async function initTour() {
+
+      if (window.location.protocol === 'file:') {
+        document.body.innerHTML = '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;background:#0f172a;color:white;font-family:sans-serif;padding:20px;text-align:center;"><h2>⚠️ Lỗi bảo mật của trình duyệt</h2><p style="max-width:600px;line-height:1.6;">Bạn không thể chạy Virtual Tour bằng cách click đúp trực tiếp vào file <code>index.html</code> (giao thức file://). Trình duyệt web chặn việc tải dữ liệu từ ổ cứng vì lý do bảo mật (CORS).</p><p style="max-width:600px;line-height:1.6;margin-top:10px;padding:15px;background:rgba(255,255,255,0.1);border-radius:8px;"><b>Cách khắc phục:</b> Hãy chạy file này thông qua một Web Server cục bộ (ví dụ: dùng tiện ích <b>Live Server</b> trong VS Code, hoặc chạy localhost giống như cách bạn đã làm trên web trước đó).</p></div>';
+        return;
+      }
+
+      const res = await fetch('tour.json?v=' + Date.now());
+      const project = await res.json();
+      const overlay = document.getElementById('overlay');
+
+      const startScene = project.scenes.find(s => s.id === project.startScene) || project.scenes[0];
+      if (!startScene) {
+        document.body.innerHTML = '<p style="color:white;padding:2em;">No scenes found.</p>';
+        throw new Error('No scenes');
+      }
+
+      const viewer = new Viewer({
+        container: document.getElementById('viewer'),
+        panorama: startScene.panorama,
+        caption: startScene.title,
+        defaultZoomLvl: 0,
+        defaultYaw: startScene.defaultYaw !== undefined ? startScene.defaultYaw : 0,
+        defaultPitch: startScene.defaultPitch !== undefined ? startScene.defaultPitch : 0,
+        plugins: [[MarkersPlugin, {}]],
+        navbar: ['zoom', 'caption', 'fullscreen'],
+      });
+
+      const markers = viewer.getPlugin(MarkersPlugin);
+      let isTransitioning = false;
+
+      // === Mobile touch tap detection ===
+      let touchStartX = 0;
+      let touchStartY = 0;
+      let touchStartTime = -Infinity;
+      let isTouchDragging = false;
+      let isTouchActive = false;
+      const TOUCH_MOVE_THRESHOLD = 10; // px
+      const TOUCH_MAX_DURATION = 400;  // ms
+
+      viewer.container.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+          touchStartTime = Date.now();
+          isTouchDragging = false;
+          isTouchActive = true;
+        }
+      }, { passive: true });
+
+      viewer.container.addEventListener('touchmove', (e) => {
+        if (e.touches.length === 1 && !isTouchDragging) {
+          const dx = e.touches[0].clientX - touchStartX;
+          const dy = e.touches[0].clientY - touchStartY;
+          if (Math.sqrt(dx * dx + dy * dy) > TOUCH_MOVE_THRESHOLD) {
+            isTouchDragging = true;
+          }
+        }
+      }, { passive: true });
+
+      viewer.container.addEventListener('touchend', () => {
+        setTimeout(() => { isTouchActive = false; }, 50);
+      }, { passive: true });
+
+      function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+      function addSceneMarkers(scene) {
+        const hsBaseOpacity = project.hotspotOpacity !== undefined ? project.hotspotOpacity : 0.3;
+        markers.clearMarkers();
+        scene.hotspots.forEach(hs => {
+          let tooltipContent = hs.title || hs.id;
+          
+          if (hs.type === 'Gallery' && hs.gallery && hs.gallery.length > 0 && !hs.isEmbedded) {
+            const imagesHtml = hs.gallery.map(url => 
+              `<img src="${url}" onclick="document.getElementById('vt-lightbox').style.display='flex'; document.getElementById('vt-lightbox-img').src=this.src;" style="flex: 0 0 100%; width: 100%; height: 100%; object-fit: cover; scroll-snap-align: start; cursor: zoom-in; pointer-events: auto;" />`
+            ).join('');
+            
+            tooltipContent = `
+              <div style="width: 340px; display: flex; flex-direction: column; gap: 8px;">
+                <div style="position: relative; width: 100%; aspect-ratio: 4/3; border-radius: 8px; overflow: hidden; background: transparent; pointer-events: auto;">
+                  <div style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; width: 100%; height: 100%; scrollbar-width: none;" class="vt-hide-scrollbar" onpointerdown="event.stopPropagation()">
+                    ${imagesHtml}
+                  </div>
+                </div>
+                ${hs.title ? `<div style="font-weight: bold; font-size: 15px; line-height: 1.4; text-align: left; white-space: pre-wrap; word-wrap: break-word;">${hs.title}</div>` : ''}
+                ${hs.description ? `<div style="font-size: 14px; line-height: 1.45; opacity: 0.95; text-align: left; white-space: pre-wrap; word-wrap: break-word;">${hs.description}</div>` : ''}
+              </div>
+            `;
+          } else if (hs.description || hs.tooltipImage) {
+            tooltipContent = `
+              <div style="display: flex; gap: 12px; align-items: flex-start; width: 340px; padding: 4px; text-align: left;">
+                ${hs.tooltipImage ? `<img src="${hs.tooltipImage}" style="width: 56px; height: 56px; object-fit: contain; padding: 4px; border-radius: 6px; flex-shrink: 0; background: #fff;" />` : ''}
+                <div style="flex-grow: 1; min-width: 0;">
+                  <div style="font-weight: bold; font-size: 15px; line-height: 1.4; margin-bottom: 4px; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 4px; white-space: pre-wrap; word-wrap: break-word;">${hs.title || hs.id}</div>
+                  ${hs.description ? `<div style="font-size: 14px; line-height: 1.45; opacity: 0.95; white-space: pre-wrap; word-wrap: break-word;">${hs.description}</div>` : ''}
+                </div>
+              </div>
+            `;
+          }
+
+            let markerHtml = buildMarkerHtml(hs.icon, '#930F1C', hsBaseOpacity);
+
+          if (hs.isEmbedded) {
+            const scale = hs.embedScale || 1;
+            const width = Math.round(400 * scale);
+            const rx = hs.rotateX || 0;
+            const ry = hs.rotateY || 0;
+            const rz = hs.rotateZ || 0;
+            const style = `width: ${width}px; height: auto; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); cursor: pointer; pointer-events: auto; transform: perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg) rotateZ(${rz}deg); transform-origin: center;`;
+            
+            if (hs.type === 'Image' && hs.target) {
+              markerHtml = `<img src="${hs.target}" style="${style}" />`;
+            } else if (hs.type === 'Video' && hs.target) {
+              markerHtml = `<video src="${hs.target}" autoplay loop muted style="${style}"></video>`;
+            } else if (hs.type === 'Gallery' && hs.gallery && hs.gallery.length > 0) {
+              markerHtml = `<img src="${hs.gallery[0]}" style="${style}" />`;
+            }
+          }
+
+          markers.addMarker({
+            id: hs.id,
+            position: { yaw: hs.yaw, pitch: hs.pitch },
+            tooltip: hs.isEmbedded ? undefined : { content: tooltipContent, position: 'top center', className: 'vt-custom-tooltip' },
+            html: markerHtml,
+            anchor: hs.isEmbedded ? 'center' : 'bottom center',
+            data: hs,
+          });
+        });
+      }
+
+      async function transitionToScene(hs, nextScene) {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        const transition = hs.transition || 'fade';
+
+        try {
+          switch (transition) {
+
+            case 'zoom-in':
+              // Animate: rotate toward hotspot, zoom in, then switch
+              viewer.animate({ yaw: hs.yaw, pitch: hs.pitch, zoom: 100, speed: '3rpm' });
+              await sleep(800);
+              overlay.classList.add('active');
+              await sleep(400);
+              const options1 = { transition: false, caption: nextScene.title };
+              if (nextScene.defaultYaw !== undefined) options1.position = { yaw: nextScene.defaultYaw, pitch: nextScene.defaultPitch || 0 };
+              await viewer.setPanorama(nextScene.panorama, options1);
+              viewer.zoom(0);
+              addSceneMarkers(nextScene);
+              playSceneMC(nextScene);
+              await sleep(100);
+              overlay.classList.remove('active');
+              break;
+
+            case 'zoom-out':
+              // Animate: zoom out, overlay, switch
+              viewer.animate({ yaw: hs.yaw, pitch: hs.pitch, zoom: 0, speed: '3rpm' });
+              await sleep(800);
+              overlay.classList.add('active');
+              await sleep(400);
+              const options2 = { transition: false, caption: nextScene.title };
+              if (nextScene.defaultYaw !== undefined) options2.position = { yaw: nextScene.defaultYaw, pitch: nextScene.defaultPitch || 0 };
+              await viewer.setPanorama(nextScene.panorama, options2);
+              viewer.zoom(0);
+              addSceneMarkers(nextScene);
+              playSceneMC(nextScene);
+              await sleep(100);
+              overlay.classList.remove('active');
+              break;
+
+            case 'fly-in':
+              // Animate: rotate to hotspot + zoom in fast, then switch with brief overlay
+              viewer.animate({ yaw: hs.yaw, pitch: hs.pitch, zoom: 100, speed: '6rpm' });
+              await sleep(500);
+              overlay.classList.add('active');
+              await sleep(300);
+              const options3 = { transition: false, caption: nextScene.title };
+              if (nextScene.defaultYaw !== undefined) options3.position = { yaw: nextScene.defaultYaw, pitch: nextScene.defaultPitch || 0 };
+              await viewer.setPanorama(nextScene.panorama, options3);
+              viewer.zoom(0);
+              addSceneMarkers(nextScene);
+              playSceneMC(nextScene);
+              overlay.classList.remove('active');
+              await sleep(50);
+              break;
+
+            case 'instant':
+              const options4 = { transition: false, caption: nextScene.title, zoom: 0 };
+              if (nextScene.defaultYaw !== undefined) options4.position = { yaw: nextScene.defaultYaw, pitch: nextScene.defaultPitch || 0 };
+              await viewer.setPanorama(nextScene.panorama, options4);
+              viewer.zoom(0);
+              addSceneMarkers(nextScene);
+              playSceneMC(nextScene);
+              break;
+
+            case 'fade':
+            default:
+              // Simple crossfade via PSV built-in transition
+              const options5 = { transition: true, caption: nextScene.title, zoom: 0 };
+              if (nextScene.defaultYaw !== undefined) options5.position = { yaw: nextScene.defaultYaw, pitch: nextScene.defaultPitch || 0 };
+              await viewer.setPanorama(nextScene.panorama, options5);
+              viewer.zoom(0);
+              addSceneMarkers(nextScene);
+              playSceneMC(nextScene);
+              break;
+          }
+        } catch (e) {
+          console.warn('Transition error:', e);
+        }
+        isTransitioning = false;
+      }
+
+      
+      // MC Helper with Reopen Button & Transparent Video (.mov / .webm / .mp4)
+      let currentMCContainer = null;
+      let currentMCReopenBtn = null;
+      let currentMCCloseTimeout = null;
+
+      // Compute MC position CSS based on mcVideoPosition
+      function computeMcPos(pos) {
+        const p = pos || 'bottom-right';
+        const isTop = p.startsWith('top');
+        const slideOut = isTop ? '-150px' : '150px';
+        switch (p) {
+          case 'top-left':
+            return { top: '0px', left: '20px', right: 'auto', bottom: 'auto', transform: 'translateY(0)', alignItems: 'flex-start',
+              reopenStyle: 'position:absolute;z-index:9999;top:60px;left:20px;', isTop: true, slideOut };
+          case 'top-center':
+            return { top: '0px', left: '50%', right: 'auto', bottom: 'auto', transform: 'translateX(-50%) translateY(0)', alignItems: 'center',
+              reopenStyle: 'position:absolute;z-index:9999;top:60px;left:50%;transform:translateX(-50%);', isTop: true, slideOut };
+          case 'top-right':
+            return { top: '0px', left: 'auto', right: '20px', bottom: 'auto', transform: 'translateY(0)', alignItems: 'flex-end',
+              reopenStyle: 'position:absolute;z-index:9999;top:60px;right:20px;', isTop: true, slideOut };
+          case 'bottom-left':
+            return { top: 'auto', left: '20px', right: 'auto', bottom: '0px', transform: 'translateY(0)', alignItems: 'flex-start',
+              reopenStyle: 'position:absolute;z-index:9999;bottom:60px;left:20px;', isTop: false, slideOut };
+          case 'bottom-center':
+            return { top: 'auto', left: '50%', right: 'auto', bottom: '0px', transform: 'translateX(-50%) translateY(0)', alignItems: 'center',
+              reopenStyle: 'position:absolute;z-index:9999;bottom:60px;left:50%;transform:translateX(-50%);', isTop: false, slideOut };
+          case 'bottom-right':
+          default:
+            return { top: 'auto', left: 'auto', right: '20px', bottom: '0px', transform: 'translateY(0)', alignItems: 'flex-end',
+              reopenStyle: 'position:absolute;z-index:9999;bottom:60px;right:20px;', isTop: false, slideOut };
+        }
+      }
+
+      function playSceneMC(scene) {
+        if (currentMCCloseTimeout) {
+          clearTimeout(currentMCCloseTimeout);
+          currentMCCloseTimeout = null;
+        }
+        if (currentMCContainer) {
+          currentMCContainer.remove();
+          currentMCContainer = null;
+        }
+        if (currentMCReopenBtn) {
+          currentMCReopenBtn.remove();
+          currentMCReopenBtn = null;
+        }
+
+        if (scene.mcVideo) {
+          const posInfo = computeMcPos(scene.mcVideoPosition);
+
+          const container = document.createElement('div');
+          container.style.cssText = 'position:absolute;z-index:9999;display:flex;flex-direction:column;transition:opacity 0.3s cubic-bezier(0.4,0,0.2,1),transform 0.3s cubic-bezier(0.4,0,0.2,1);opacity:1;'
+            + 'top:' + posInfo.top + ';bottom:' + posInfo.bottom + ';left:' + posInfo.left + ';right:' + posInfo.right + ';'
+            + 'transform:' + posInfo.transform + ';align-items:' + posInfo.alignItems + ';';
+
+          const reopenBtn = document.createElement('button');
+          reopenBtn.innerHTML = '🎙️ Mở lại MC';
+          reopenBtn.style.cssText = posInfo.reopenStyle + 'background:#d97706;color:white;border:1px solid rgba(255,255,255,0.4);border-radius:20px;padding:8px 16px;font-size:12px;font-weight:bold;cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,0.4);display:none;';
+
+          const closeBtn = document.createElement('button');
+          closeBtn.innerHTML = '&times;';
+          closeBtn.style.cssText = 'background:rgba(0,0,0,0.6);color:white;border:none;border-radius:50%;width:26px;height:26px;font-size:16px;cursor:pointer;flex-shrink:0;';
+          closeBtn.title = 'Đóng MC';
+
+          const getSlideOutTransform = () => {
+            const base = posInfo.transform.includes('translateX(-50%)') ? 'translateX(-50%) ' : '';
+            return base + 'translateY(' + posInfo.slideOut + ')';
+          };
+          const getRestTransform = () => posInfo.transform;
+
+          const triggerCloseMC = () => {
+            if (currentMCCloseTimeout) clearTimeout(currentMCCloseTimeout);
+            container.style.opacity = '0';
+            container.style.transform = getSlideOutTransform();
+            if (bgmAudio) bgmAudio.volume = defaultBgmVol;
+            currentMCCloseTimeout = setTimeout(() => {
+              container.style.display = 'none';
+              reopenBtn.style.display = 'block';
+              reopenBtn.style.opacity = '0';
+              reopenBtn.style.transition = 'opacity 0.3s ease';
+              setTimeout(() => { reopenBtn.style.opacity = '1'; }, 20);
+              const vid = container.querySelector('video');
+              if (vid) vid.pause();
+              currentMCCloseTimeout = null;
+            }, 300);
+          };
+
+          closeBtn.onclick = triggerCloseMC;
+
+          reopenBtn.onclick = () => {
+            if (currentMCCloseTimeout) clearTimeout(currentMCCloseTimeout);
+            reopenBtn.style.display = 'none';
+            container.style.display = 'flex';
+            container.style.opacity = '0';
+            container.style.transform = getSlideOutTransform();
+            setTimeout(() => {
+              container.style.opacity = '1';
+              container.style.transform = getRestTransform();
+            }, 20);
+            const vid = container.querySelector('video');
+            if (vid) {
+              vid.currentTime = 0;
+              vid.play();
+              if (bgmAudio) bgmAudio.volume = defaultBgmVol * 0.2;
+            }
+          };
+
+          // mix-blend-mode: screen – removes black background from MC video.
+          // IMPORTANT: do NOT set isolation on this container — it would break the blend.
+
+          const video = document.createElement('video');
+          video.src = scene.mcVideo;
+          video.autoplay = true;
+          video.playsInline = true;
+          video.setAttribute('webkit-playsinline', 'true');
+          video.setAttribute('playsinline', 'true');
+          video.controls = false;
+          video.style.width = (scene.mcVideoWidth || 280) + 'px';
+          video.style.maxWidth = '85vw';
+          video.style.maxHeight = '65vh';
+          video.style.objectFit = 'contain';
+          video.style.background = 'transparent';
+          video.style.border = 'none';
+          video.style.outline = 'none';
+          video.style.boxShadow = 'none';
+          video.style.mixBlendMode = 'screen';
+          video.style.WebkitMixBlendMode = 'screen';
+
+          if (posInfo.isTop) {
+            // Top: video first, then close button below
+            container.appendChild(video);
+            container.appendChild(closeBtn);
+          } else {
+            // Bottom: close button first (above video), then video
+            container.appendChild(closeBtn);
+            container.appendChild(video);
+          }
+
+          viewer.container.appendChild(container);
+          viewer.container.appendChild(reopenBtn);
+          
+          currentMCContainer = container;
+          currentMCReopenBtn = reopenBtn;
+          if (bgmAudio) bgmAudio.volume = defaultBgmVol * 0.2;
+          video.onended = () => { closeBtn.click(); };
+        }
+      }
+
+      // Initial markers
+      viewer.addEventListener('ready', () => {
+        setTimeout(() => {
+          if (startScene.defaultYaw !== undefined) {
+            viewer.rotate({ yaw: startScene.defaultYaw, pitch: startScene.defaultPitch || 0 });
+          }
+          viewer.zoom(0);
+          addSceneMarkers(startScene);
+        }, 50);
+      }, { once: true });
+      
+      const startScreen = document.getElementById('vt-start-screen');
+      const startBtn = document.getElementById('vt-start-btn');
+      let tourStarted = false;
+      let tryPlayBgm = () => {};
+      
+      if (startBtn && startScreen) {
+        const homeBtn = document.getElementById('vt-home-btn');
+        startBtn.addEventListener('click', () => {
+          tourStarted = true;
+          startScreen.style.opacity = '0';
+          setTimeout(() => startScreen.style.display = 'none', 500);
+          if (homeBtn) {
+            homeBtn.style.display = 'flex';
+            homeBtn.style.alignItems = 'center';
+            homeBtn.style.justifyContent = 'center';
+          }
+          playSceneMC(startScene);
+          tryPlayBgm();
+        });
+        // Home button: fade start screen back in
+        if (homeBtn) {
+          homeBtn.addEventListener('click', () => {
+            if (!confirm('Bạn có muốn quay về màn hình chào mừng không?')) return;
+            // Fade out MC video if playing
+            if (currentMCContainer) {
+              currentMCContainer.style.opacity = '0';
+              if (currentMCReopenBtn) currentMCReopenBtn.style.display = 'none';
+            }
+            homeBtn.style.display = 'none';
+            tourStarted = false;
+            startScreen.style.display = 'flex';
+            requestAnimationFrame(() => { startScreen.style.opacity = '1'; });
+            // Reset BGM volume
+            if (bgmAudio) bgmAudio.volume = defaultBgmVol;
+          });
+        }
+      }
+
+
+
+      function openMediaPopup(hs) {
+        const popupOverlay = document.getElementById('popup-overlay');
+        const popupTitle = document.getElementById('popup-title');
+        const popupContent = document.getElementById('popup-content');
+        if (!popupOverlay || !popupContent) return;
+
+        const popupContainer = popupOverlay.querySelector('.popup-container');
+        if (popupContainer) {
+          if (hs.type === 'Image' || hs.type === 'Gallery') {
+            // Frame hugs the image edge – amber border directly on the image
+            popupContainer.style.border = '3.5px solid #f59e0b';
+            popupContainer.style.background = 'transparent';
+            popupContainer.style.boxShadow = '0 20px 50px rgba(0,0,0,0.7), 0 0 20px rgba(245,158,11,0.3)';
+            popupContainer.style.backdropFilter = 'none';
+            popupContainer.style.padding = '0';
+          } else {
+            popupContainer.style.border = '3.5px solid #f59e0b';
+            popupContainer.style.background = 'rgba(15, 23, 42, 0.4)';
+            popupContainer.style.boxShadow = '0 20px 50px rgba(0,0,0,0.7), 0 0 20px rgba(245,158,11,0.3)';
+            popupContainer.style.backdropFilter = 'blur(2px)';
+            popupContainer.style.padding = '0';
+          }
+        }
+
+        if (popupTitle) popupTitle.textContent = hs.title || hs.id || 'Chi tiết Hotspot';
+        popupContent.innerHTML = '';
+
+        const images = hs.gallery && hs.gallery.length > 0 
+          ? hs.gallery 
+          : (hs.target ? [hs.target] : (hs.tooltipImage ? [hs.tooltipImage] : []));
+
+        if ((hs.type === 'Image' || hs.type === 'Gallery') && images.length > 0) {
+          // Wrapper: relative, holds the horizontal scroll strip + counter + arrows
+          const container = document.createElement('div');
+          container.style.cssText = 'position: relative; display: block; max-width: 70vw; max-height: 66vh;';
+
+          // Horizontal scroll strip with snap
+          const scroll = document.createElement('div');
+          scroll.style.cssText = 'display: flex; overflow-x: auto; width: 100%; max-height: 66vh; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none;';
+
+          images.forEach((url) => {
+            const slide = document.createElement('div');
+            slide.style.cssText = 'flex: 0 0 100%; width: 100%; display: flex; align-items: center; justify-content: center; scroll-snap-align: start; scroll-snap-stop: always; box-sizing: border-box;';
+            const img = document.createElement('img');
+            img.src = url;
+            img.style.cssText = 'max-width: 70vw; max-height: 66vh; object-fit: contain; display: block; border-radius: 0; box-shadow: none;';
+            img.onerror = () => {
+              img.style.display = 'none';
+              const fb = document.createElement('div');
+              fb.style.cssText = 'display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;background:rgba(15,23,42,0.9);border-radius:12px;border:1px solid rgba(245,158,11,0.4);color:#fef3c7;text-align:center;font-family:sans-serif;';
+              fb.innerHTML = '<span style="font-size:32px;margin-bottom:8px;">🖼️⚠️</span><div style="font-weight:bold;font-size:14px;">Không thể tải ảnh này</div>';
+              slide.appendChild(fb);
+            };
+            slide.appendChild(img);
+            scroll.appendChild(slide);
+          });
+
+          container.appendChild(scroll);
+
+          // Counter badge – bottom-right
+          let counter = null;
+          if (images.length > 1) {
+            counter = document.createElement('div');
+            counter.style.cssText = 'position: absolute; bottom: 12px; right: 16px; background: rgba(0,0,0,0.75); color: #f59e0b; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-family: monospace; z-index: 10; border: 1px solid rgba(255,255,255,0.2); line-height: 1.2;';
+            counter.textContent = '1 / ' + images.length;
+            container.appendChild(counter);
+
+            // Update counter on scroll
+            scroll.addEventListener('scroll', () => {
+              const idx = Math.round(scroll.scrollLeft / scroll.clientWidth);
+              counter.textContent = (idx + 1) + ' / ' + images.length;
+            }, { passive: true });
+
+            // Prev / Next arrows
+            const prevBtn = document.createElement('button');
+            prevBtn.innerHTML = '‹';
+            prevBtn.style.cssText = 'position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; background: rgba(15,23,42,0.8); color: white; font-size: 24px; border: 1px solid rgba(255,255,255,0.2); cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(8px);';
+            prevBtn.onclick = (e) => { e.stopPropagation(); scroll.scrollBy({ left: -scroll.clientWidth, behavior: 'smooth' }); };
+
+            const nextBtn = document.createElement('button');
+            nextBtn.innerHTML = '›';
+            nextBtn.style.cssText = 'position: absolute; right: 16px; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; background: rgba(15,23,42,0.8); color: white; font-size: 24px; border: 1px solid rgba(255,255,255,0.2); cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(8px);';
+            nextBtn.onclick = (e) => { e.stopPropagation(); scroll.scrollBy({ left: scroll.clientWidth, behavior: 'smooth' }); };
+
+            container.appendChild(prevBtn);
+            container.appendChild(nextBtn);
+          }
+
+          popupContent.appendChild(container);
+        } else if (hs.type === 'Video' && hs.target) {
+          const video = document.createElement('video');
+          video.src = hs.target;
+          video.controls = true;
+          video.autoplay = true;
+          video.style.cssText = 'max-width: 100%; max-height: 100%; object-fit: contain;';
+          popupContent.appendChild(video);
+        } else if ((hs.type === 'Website' || hs.type === 'PDF') && hs.target) {
+          const iframe = document.createElement('iframe');
+          iframe.src = hs.target;
+          iframe.style.cssText = 'width: 1200px; height: 800px; max-width: 100%; max-height: 100%; border: none; background: white;';
+          popupContent.appendChild(iframe);
+        }
+
+        popupOverlay.classList.add('active');
+      }
+
+      const pCloseBtn = document.getElementById('popup-close');
+      if (pCloseBtn) {
+        pCloseBtn.onclick = () => {
+          document.getElementById('popup-overlay')?.classList.remove('active');
+        };
+      }
+      const pOverlay = document.getElementById('popup-overlay');
+      if (pOverlay) {
+        pOverlay.onclick = (e) => {
+          if (e.target === pOverlay) pOverlay.classList.remove('active');
+        };
+      }
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          document.getElementById('popup-overlay')?.classList.remove('active');
+        }
+      });
+
+      // Handle marker clicks
+      markers.addEventListener('select-marker', (e) => {
+        const marker = e.marker;
+        const hs = marker.data;
+
+        // Block marker actions during active touch swipe/drag/long-press
+        if (isTouchActive) {
+          const elapsed = Date.now() - touchStartTime;
+          if (isTouchDragging || elapsed > TOUCH_MAX_DURATION) {
+            return;
+          }
+        }
+
+        if (hs.type === 'Scene' && hs.target) {
+          const targetScene = project.scenes.find(s => s.id === hs.target);
+          if (!targetScene) return;
+
+          // On touch: show info bottom sheet first instead of direct transition
+          if (isTouchActive) {
+            showSceneInfoBottomSheet(hs, targetScene);
+          } else {
+            transitionToScene(hs, targetScene);
+          }
+        } else if (hs.type === 'Gallery' || hs.type === 'Image' || hs.type === 'Video' || hs.type === 'PDF' || hs.type === 'Website') {
+          // Website in "tab" mode → open in new browser tab directly
+          if (hs.type === 'Website' && hs.target && hs.websiteOpenMode === 'tab') {
+            window.open(hs.target, '_blank', 'noopener,noreferrer');
+          } else {
+            openMediaPopup(hs);
+          }
+        }
+      });
+
+      // === Mobile scene info bottom sheet ===
+      function showSceneInfoBottomSheet(hs, targetScene) {
+        const overlay = document.getElementById('vt-hs-info');
+        const titleEl = document.getElementById('vt-hs-info-title');
+        const descEl = document.getElementById('vt-hs-info-desc');
+        const imgEl = document.getElementById('vt-hs-info-img');
+        const goBtn = document.getElementById('vt-hs-info-go');
+        const closeBtn = document.getElementById('vt-hs-info-close');
+        if (!overlay || !titleEl || !descEl || !goBtn || !closeBtn) return;
+
+        // Build title with icon
+        const iconKey = hs.icon || 'pin';
+        const svgPath = ICON_SVG[iconKey] || ICON_SVG['arrow'] || '';
+        titleEl.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:24px;height:24px;"><' + svgPath.replace(/<path /g, '<path ') + '</svg><span>' + (hs.title || targetScene.title || 'Chuyển cảnh') + '</span>';
+
+        // Description
+        if (hs.description) {
+          descEl.textContent = hs.description;
+          descEl.style.display = 'block';
+        } else {
+          descEl.textContent = 'Nhấn "Đi tới" để chuyển đến không gian này.';
+          descEl.style.display = 'block';
+        }
+
+        // Tooltip image
+        if (hs.tooltipImage) {
+          imgEl.src = hs.tooltipImage;
+          imgEl.style.display = 'block';
+        } else {
+          imgEl.style.display = 'none';
+        }
+
+        // Wire buttons
+        const doTransition = () => {
+          overlay.classList.remove('active');
+          setTimeout(() => transitionToScene(hs, targetScene), 200);
+        };
+        goBtn.onclick = doTransition;
+        closeBtn.onclick = () => overlay.classList.remove('active');
+        overlay.onclick = (ev) => { if (ev.target === overlay) overlay.classList.remove('active'); };
+
+        overlay.classList.add('active');
+      }
+
+      
+      // --- Background Music Logic ---
+      const bgmAudio = document.getElementById('vt-bgm');
+      const bgmBtn = document.getElementById('vt-bgm-btn');
+      let isBgmActive = true;
+      const defaultBgmVol = project.bgmVolume !== undefined ? project.bgmVolume : 0.5;
+
+      if (project.bgmUrl) {
+        bgmAudio.src = project.bgmUrl;
+        bgmAudio.loop = project.bgmLoop !== false;
+        bgmAudio.volume = defaultBgmVol;
+        bgmBtn.style.display = 'flex';
+        bgmBtn.style.alignItems = 'center';
+        bgmBtn.style.justifyContent = 'center';
+
+        tryPlayBgm = () => {
+          if (isBgmActive && bgmAudio.paused && (typeof tourStarted === 'undefined' || tourStarted)) {
+            bgmAudio.play().then(() => {
+              bgmBtn.textContent = '🔊';
+            }).catch(() => {
+              // Browser autoplay policy might require click
+            });
+          }
+        };
+
+        // We don't call tryPlayBgm() here directly anymore, it's called by start button
+        // but keep the document click listeners as a fallback
+        document.addEventListener('click', tryPlayBgm, { once: true });
+        document.addEventListener('touchstart', tryPlayBgm, { once: true });
+
+        bgmBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (bgmAudio.paused) {
+            isBgmActive = true;
+            bgmAudio.play();
+            bgmBtn.textContent = '🎵';
+          } else {
+            isBgmActive = false;
+            bgmAudio.pause();
+            bgmBtn.textContent = '🔇';
+          }
+        });
+      }
+
+
+      // --- Menu Logic ---
+      if (project.menu && project.menu.length > 0) {
+        document.getElementById('vt-menu-btn').style.display = 'flex';
+        
+        const menuBtn = document.getElementById('vt-menu-btn');
+        const menuDrawer = document.getElementById('vt-menu-drawer');
+        const menuContent = document.getElementById('vt-menu-content');
+        
+        let menuOpen = false;
+        menuBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          menuOpen = !menuOpen;
+          menuDrawer.classList.toggle('active', menuOpen);
+        });
+
+        function renderMenu(items, container) {
+          items.forEach(item => {
+            const row = document.createElement('div');
+            row.className = 'vt-menu-item-row';
+            
+            const label = document.createElement('div');
+            label.className = 'vt-menu-item-label';
+            label.textContent = item.title;
+            row.appendChild(label);
+            
+            const hasChildren = item.children && item.children.length > 0;
+            let toggleBtn;
+            if (hasChildren) {
+              toggleBtn = document.createElement('div');
+              toggleBtn.className = 'vt-menu-item-toggle';
+              toggleBtn.innerHTML = '<svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:white;stroke-width:2;fill:none;stroke-linecap:round;"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+              row.appendChild(toggleBtn);
+            }
+            
+            const childrenContainer = document.createElement('div');
+            if (hasChildren) {
+              childrenContainer.className = 'vt-menu-children';
+              renderMenu(item.children, childrenContainer);
+            }
+            
+            row.addEventListener('click', (e) => {
+              e.stopPropagation();
+              if (item.targetSceneId) {
+                const targetScene = project.scenes.find(s => s.id === item.targetSceneId);
+                if (targetScene) {
+                  const dummyHs = { transition: 'fade' };
+                  transitionToScene(dummyHs, targetScene);
+                  menuOpen = false;
+                  menuDrawer.classList.remove('active');
+                }
+              }
+              if (hasChildren) {
+                const isOpen = childrenContainer.classList.contains('open');
+                childrenContainer.classList.toggle('open', !isOpen);
+                toggleBtn.classList.toggle('open', !isOpen);
+              }
+            });
+            
+            container.appendChild(row);
+            if (hasChildren) {
+              container.appendChild(childrenContainer);
+            }
+          });
+        }
+        
+        renderMenu(project.menu, menuContent);
+      }
+
+      // --- Popup Logic ---
+      const popupOverlay = document.getElementById('popup-overlay');
+      const popupContent = document.getElementById('popup-content');
+      const popupClose = document.getElementById('popup-close');
+
+      function closePopup() {
+        popupOverlay.classList.remove('active');
+        // Clear content to stop videos/iframes
+        setTimeout(() => { popupContent.innerHTML = ''; }, 300);
+      }
+
+      popupClose.addEventListener('click', closePopup);
+      popupOverlay.addEventListener('click', (e) => {
+        if (e.target === popupOverlay) closePopup();
+      });
+
+      })();
+    </script>
+  </body>
+</html>
